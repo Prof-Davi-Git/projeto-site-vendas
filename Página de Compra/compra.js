@@ -1,10 +1,6 @@
 const produtos = {
 
 
-    // =========================
-    // PRODUTO 1 - ROUPA
-    // =========================
-
     1: {
 
         categoria: "ROUPAS",
@@ -20,7 +16,6 @@ const produtos = {
 
         tamanhos: ["P", "M", "G", "GG"],
 
-
         variacoes: [
 
             {
@@ -30,9 +25,8 @@ const produtos = {
                     "Cor preta • 100% algodão",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Modelo Branco",
@@ -41,7 +35,7 @@ const produtos = {
                     "Cor branca • 100% algodão",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             }
 
         ]
@@ -49,10 +43,6 @@ const produtos = {
     },
 
 
-
-    // =========================
-    // PRODUTO 2
-    // =========================
 
     2: {
 
@@ -67,7 +57,6 @@ const produtos = {
 
         temTamanho: false,
 
-
         variacoes: [
 
             {
@@ -77,9 +66,8 @@ const produtos = {
                     "7200 DPI • 6 botões • RGB",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Modelo Pro",
@@ -88,9 +76,8 @@ const produtos = {
                     "12000 DPI • 8 botões • RGB",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Modelo Wireless",
@@ -99,7 +86,7 @@ const produtos = {
                     "Sem fio • 10000 DPI • RGB",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             }
 
         ]
@@ -107,10 +94,6 @@ const produtos = {
     },
 
 
-
-    // =========================
-    // PRODUTO 3
-    // =========================
 
     3: {
 
@@ -125,7 +108,6 @@ const produtos = {
 
         temTamanho: false,
 
-
         variacoes: [
 
             {
@@ -135,9 +117,8 @@ const produtos = {
                     "20 litros • 2 compartimentos",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Modelo Grande",
@@ -146,7 +127,7 @@ const produtos = {
                     "35 litros • 4 compartimentos",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             }
 
         ]
@@ -154,10 +135,6 @@ const produtos = {
     },
 
 
-
-    // =========================
-    // PRODUTO 4
-    // =========================
 
     4: {
 
@@ -172,7 +149,6 @@ const produtos = {
 
         temTamanho: false,
 
-
         variacoes: [
 
             {
@@ -182,9 +158,8 @@ const produtos = {
                     "Conteúdo de 50 ml",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Frasco 100 ml",
@@ -193,7 +168,7 @@ const produtos = {
                     "Conteúdo de 100 ml",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             }
 
         ]
@@ -201,10 +176,6 @@ const produtos = {
     },
 
 
-
-    // =========================
-    // PRODUTO 5 - ROUPA
-    // =========================
 
     5: {
 
@@ -221,7 +192,6 @@ const produtos = {
 
         tamanhos: ["P", "M", "G", "GG"],
 
-
         variacoes: [
 
             {
@@ -231,9 +201,8 @@ const produtos = {
                     "Moletom preto",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Modelo Cinza",
@@ -242,7 +211,7 @@ const produtos = {
                     "Moletom cinza",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             }
 
         ]
@@ -250,10 +219,6 @@ const produtos = {
     },
 
 
-
-    // =========================
-    // PRODUTO 6
-    // =========================
 
     6: {
 
@@ -268,7 +233,6 @@ const produtos = {
 
         temTamanho: false,
 
-
         variacoes: [
 
             {
@@ -278,9 +242,8 @@ const produtos = {
                     "Switch Blue • RGB",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Switch Vermelho",
@@ -289,7 +252,7 @@ const produtos = {
                     "Switch Red • RGB",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             }
 
         ]
@@ -297,10 +260,6 @@ const produtos = {
     },
 
 
-
-    // =========================
-    // PRODUTO 7
-    // =========================
 
     7: {
 
@@ -315,7 +274,6 @@ const produtos = {
 
         temTamanho: false,
 
-
         variacoes: [
 
             {
@@ -325,9 +283,8 @@ const produtos = {
                     "Cor preta • Ajustável",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Modelo Branco",
@@ -336,7 +293,7 @@ const produtos = {
                     "Cor branca • Ajustável",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             }
 
         ]
@@ -344,10 +301,6 @@ const produtos = {
     },
 
 
-
-    // =========================
-    // PRODUTO 8
-    // =========================
 
     8: {
 
@@ -362,7 +315,6 @@ const produtos = {
 
         temTamanho: false,
 
-
         variacoes: [
 
             {
@@ -372,9 +324,8 @@ const produtos = {
                     "350 ml • Cerâmica",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Modelo Branco",
@@ -383,7 +334,7 @@ const produtos = {
                     "350 ml • Cerâmica",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             }
 
         ]
@@ -391,10 +342,6 @@ const produtos = {
     },
 
 
-
-    // =========================
-    // PRODUTO 9 - ROUPA
-    // =========================
 
     9: {
 
@@ -411,7 +358,6 @@ const produtos = {
 
         tamanhos: ["P", "M", "G", "GG"],
 
-
         variacoes: [
 
             {
@@ -421,9 +367,8 @@ const produtos = {
                     "Cor preta",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Modelo Bege",
@@ -432,7 +377,7 @@ const produtos = {
                     "Cor bege",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             }
 
         ]
@@ -440,10 +385,6 @@ const produtos = {
     },
 
 
-
-    // =========================
-    // PRODUTO 10
-    // =========================
 
     10: {
 
@@ -458,7 +399,6 @@ const produtos = {
 
         temTamanho: false,
 
-
         variacoes: [
 
             {
@@ -468,9 +408,8 @@ const produtos = {
                     "USB • Microfone integrado",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             },
-
 
             {
                 nome: "Modelo Wireless",
@@ -479,7 +418,7 @@ const produtos = {
                     "Sem fio • Microfone integrado",
 
                 imagem:
-                    "/Imagens/Produto teste.webp"
+                    "../Imagens/Produto teste.webp"
             }
 
         ]
@@ -491,68 +430,66 @@ const produtos = {
 
 
 
-// ======================================
-// DESCOBRE QUAL PRODUTO FOI CLICADO
-// ======================================
+// PEGA O ID DA URL
 
 const parametros =
     new URLSearchParams(window.location.search);
 
 
+// SE ABRIR DIRETO SEM ID,
+// CARREGA O PRODUTO 1
+
 const id =
-    parametros.get("id");
+    parametros.get("id") || "1";
 
 
 const produto =
-    produtos[id];
+    produtos[id] || produtos[1];
 
 
 
-if (produto) {
-
-    carregarProduto();
-
-}
+carregarProduto();
 
 
 
-// ======================================
-// COLOCA OS DADOS NA TELA
-// ======================================
+// CARREGA AS INFORMAÇÕES
 
 function carregarProduto() {
 
 
-    document.getElementById("categoriaProduto").textContent =
+    document
+        .getElementById("categoriaProduto")
+        .textContent =
         produto.categoria;
 
 
-    document.getElementById("nomeProduto").textContent =
+    document
+        .getElementById("nomeProduto")
+        .textContent =
         produto.nome;
 
 
-    document.getElementById("precoProduto").textContent =
+    document
+        .getElementById("precoProduto")
+        .textContent =
         produto.preco;
 
 
-    document.getElementById("descricaoProduto").textContent =
+    document
+        .getElementById("descricaoProduto")
+        .textContent =
         produto.descricao;
-
 
 
     criarMiniaturas();
 
-
     configurarTamanhos();
-
 
 }
 
 
 
-// ======================================
-// CRIA AS FOTOS LATERAIS
-// ======================================
+// CRIA AS MINIATURAS
 
 function criarMiniaturas() {
 
@@ -562,7 +499,6 @@ function criarMiniaturas() {
 
 
     area.innerHTML = "";
-
 
 
     produto.variacoes.forEach(
@@ -599,10 +535,8 @@ function criarMiniaturas() {
 
             area.appendChild(imagem);
 
-
         }
     );
-
 
 
     let primeiraImagem =
@@ -615,79 +549,74 @@ function criarMiniaturas() {
 
     }
 
-
 }
 
 
 
-// ======================================
-// TROCA MODELO / FOTO / ESPECIFICAÇÃO
-// ======================================
+// TROCA O MODELO
 
 function trocarModelo(imagem) {
 
 
-    let imagemPrincipal =
-        document.getElementById("imagemPrincipal");
-
-
-    let nomeModelo =
-        document.getElementById("nomeModelo");
-
-
-    let especificacaoModelo =
-        document.getElementById("especificacaoModelo");
-
-
-
-    imagemPrincipal.src =
+    document
+        .getElementById("imagemPrincipal")
+        .src =
         imagem.src;
 
 
-    nomeModelo.textContent =
+    document
+        .getElementById("nomeModelo")
+        .textContent =
         imagem.dataset.nome;
 
 
-    especificacaoModelo.textContent =
+    document
+        .getElementById("especificacaoModelo")
+        .textContent =
         imagem.dataset.especificacao;
 
 
-
     let miniaturas =
-        document.querySelectorAll(".miniaturas img");
+        document.querySelectorAll(
+            ".miniaturas img"
+        );
 
 
     miniaturas.forEach(function(item) {
 
-        item.classList.remove("selecionada");
+        item.classList.remove(
+            "selecionada"
+        );
 
     });
 
 
-    imagem.classList.add("selecionada");
-
+    imagem.classList.add(
+        "selecionada"
+    );
 
 }
 
 
 
-// ======================================
-// MOSTRA OU ESCONDE TAMANHOS
-// ======================================
+// TAMANHOS
 
 function configurarTamanhos() {
 
 
     let area =
-        document.getElementById("areaTamanhos");
+        document.getElementById(
+            "areaTamanhos"
+        );
 
 
     let tamanhos =
-        document.getElementById("tamanhos");
+        document.getElementById(
+            "tamanhos"
+        );
 
 
     tamanhos.innerHTML = "";
-
 
 
     if (produto.temTamanho === true) {
@@ -697,13 +626,14 @@ function configurarTamanhos() {
             "block";
 
 
-
         produto.tamanhos.forEach(
             function(tamanho) {
 
 
                 let botao =
-                    document.createElement("button");
+                    document.createElement(
+                        "button"
+                    );
 
 
                 botao.textContent =
@@ -713,13 +643,16 @@ function configurarTamanhos() {
                 botao.onclick =
                     function() {
 
-                        selecionarTamanho(botao);
+                        selecionarTamanho(
+                            botao
+                        );
 
                     };
 
 
-                tamanhos.appendChild(botao);
-
+                tamanhos.appendChild(
+                    botao
+                );
 
             }
         );
@@ -731,33 +664,34 @@ function configurarTamanhos() {
         area.style.display =
             "none";
 
-
     }
-
 
 }
 
 
 
-// ======================================
-// SELECIONA UM TAMANHO
-// ======================================
+// SELECIONA TAMANHO
 
 function selecionarTamanho(botao) {
 
 
     let botoes =
-        document.querySelectorAll(".tamanhos button");
+        document.querySelectorAll(
+            ".tamanhos button"
+        );
 
 
     botoes.forEach(function(item) {
 
-        item.classList.remove("selecionado");
+        item.classList.remove(
+            "selecionado"
+        );
 
     });
 
 
-    botao.classList.add("selecionado");
-
+    botao.classList.add(
+        "selecionado"
+    );
 
 }

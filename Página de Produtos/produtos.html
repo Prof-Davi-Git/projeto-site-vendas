@@ -1,83 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
-    <title>Minha Loja</title>
-    <link rel="stylesheet" href="produtos.css">
+
+    <title>Produtos - Minha Loja</title>
+
+    <link
+        rel="stylesheet"
+        href="produtos.css"
+    >
+
 </head>
+
+
 <body>
 
+
+    <!-- BARRA SUPERIOR -->
+
     <div class="barra-topo">
+
         FRETE GRÁTIS PARA TODO O PAÍS 🚚
+
     </div>
 
-    <header>
-        
-        <img src="../Imagens/LOJA TESTE (1).png" alt="">
 
-        <input 
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <img
+            src="../Imagens/LOJA TESTE (1).png"
+            alt="Logo da loja"
+        >
+
+
+        <input
             type="text"
-            id="pesquisa" 
+            id="pesquisa"
             placeholder="O que você procura?"
             onkeyup="filtrarProdutos()"
         >
 
     </header>
 
+
+
+    <!-- MENU -->
+
     <nav class="menu">
 
         <a href="../Página de Início/inicio.html">
             INÍCIO
         </a>
-    
+
         <a href="produtos.html">
             PRODUTOS
         </a>
-    
+
         <a href="#">
             PROMOÇÕES
         </a>
-    
+
         <a href="../Página de Contatos/contato.html">
             CONTATO
         </a>
-    
+
     </nav>
+
+
+
+    <!-- CATEGORIAS -->
 
     <div class="area-categorias">
 
-        <button class="botao-categorias" onclick="abrirCategorias()">
+
+        <button
+            class="botao-categorias"
+            onclick="abrirCategorias()"
+        >
+
             CATEGORIAS ▼
+
         </button>
-    
-        <div class="menu-categorias" id="menuCategorias">
-    
-            <button onclick="filtrarCategoria('todos')">
+
+
+        <div
+            class="menu-categorias"
+            id="menuCategorias"
+        >
+
+
+            <button
+                onclick="filtrarCategoria('todos')"
+            >
                 TODOS
             </button>
-    
-            <button onclick="filtrarCategoria('roupas')">
+
+
+            <button
+                onclick="filtrarCategoria('roupas')"
+            >
                 ROUPAS
             </button>
-    
-            <button onclick="filtrarCategoria('informatica')">
+
+
+            <button
+                onclick="filtrarCategoria('informatica')"
+            >
                 INFORMÁTICA
             </button>
-    
-            <button onclick="filtrarCategoria('acessorios')">
+
+
+            <button
+                onclick="filtrarCategoria('acessorios')"
+            >
                 ACESSÓRIOS
             </button>
-    
-            <button onclick="filtrarCategoria('outros')">
+
+
+            <button
+                onclick="filtrarCategoria('outros')"
+            >
                 OUTROS
             </button>
-    
+
+
         </div>
-    
+
     </div>
 
 
+
+    <!-- PRODUTOS -->
+
     <main class="produtos">
+
+
+        <!-- PRODUTO 1 -->
 
         <div
             class="produto"
@@ -85,25 +148,59 @@
             onclick="abrirProduto(1)"
         >
 
-            <img src="../Imagens/Produto teste.webp" alt="" loading="lazy">
-            <h2>Produto 1</h2>
-            <p>R$ 100,00</p>
-            <button onclick="comprar('Produto 1')">Comprar</button>
+            <img
+                src="../Imagens/Produto teste.webp"
+                alt="Camiseta Oversized"
+                loading="lazy"
+            >
+
+            <h2>
+                Camiseta Oversized
+            </h2>
+
+            <p>
+                R$ 100,00
+            </p>
+
+            <button>
+                Ver produto
+            </button>
+
         </div>
 
 
+
+        <!-- PRODUTO 2 -->
+
         <div
-             class="produto"
-             data-categoria="informatica"
+            class="produto"
+            data-categoria="informatica"
             onclick="abrirProduto(2)"
         >
 
-            <img src="../Imagens/Produto teste.webp" alt="" loading="lazy">
-            <h2>Produto 2</h2>
-            <p>R$ 150,00</p>
-            <button onclick="comprar('Produto 2')">Comprar</button>
+            <img
+                src="../Imagens/Produto teste.webp"
+                alt="Mouse Gamer"
+                loading="lazy"
+            >
+
+            <h2>
+                Mouse Gamer
+            </h2>
+
+            <p>
+                R$ 150,00
+            </p>
+
+            <button>
+                Ver produto
+            </button>
+
         </div>
 
+
+
+        <!-- PRODUTO 3 -->
 
         <div
             class="produto"
@@ -111,70 +208,244 @@
             onclick="abrirProduto(3)"
         >
 
-            <img src="../Imagens/Produto teste.webp" alt="" loading="lazy">
-            <h2>Produto 3</h2>
-            <p>R$ 200,00</p>
-            <button onclick="comprar('Produto 3')">Comprar</button>
+            <img
+                src="../Imagens/Produto teste.webp"
+                alt="Mochila"
+                loading="lazy"
+            >
+
+            <h2>
+                Mochila
+            </h2>
+
+            <p>
+                R$ 200,00
+            </p>
+
+            <button>
+                Ver produto
+            </button>
+
         </div>
 
-        <div class="produto" data-categoria="outros">
 
-            <img src="../Imagens/Produto teste.webp" alt="" loading="lazy">
-            <h2>Produto 4</h2>
-            <p>R$ 250,00</p>
-            <button onclick="comprar('Produto 4')">Comprar</button>
+
+        <!-- PRODUTO 4 -->
+
+        <div
+            class="produto"
+            data-categoria="outros"
+            onclick="abrirProduto(4)"
+        >
+
+            <img
+                src="../Imagens/Produto teste.webp"
+                alt="Perfume"
+                loading="lazy"
+            >
+
+            <h2>
+                Perfume
+            </h2>
+
+            <p>
+                R$ 250,00
+            </p>
+
+            <button>
+                Ver produto
+            </button>
+
         </div>
 
-        <div class="produto" data-categoria="roupas">
 
-            <img src="../Imagens/Produto teste.webp" alt="" loading="lazy">
-            <h2>Produto 5</h2>
-            <p>R$ 250,00</p>
-            <button onclick="comprar('Produto 5')">Comprar</button>
+
+        <!-- PRODUTO 5 -->
+
+        <div
+            class="produto"
+            data-categoria="roupas"
+            onclick="abrirProduto(5)"
+        >
+
+            <img
+                src="../Imagens/Produto teste.webp"
+                alt="Moletom Street"
+                loading="lazy"
+            >
+
+            <h2>
+                Moletom Street
+            </h2>
+
+            <p>
+                R$ 250,00
+            </p>
+
+            <button>
+                Ver produto
+            </button>
+
         </div>
 
-        <div class="produto" data-categoria="informatica">
 
-            <img src="../Imagens/Produto teste.webp" alt="" loading="lazy">
-            <h2>Produto 6</h2>
-            <p>R$ 250,00</p>
-            <button onclick="comprar('Produto 6')">Comprar</button>
+
+        <!-- PRODUTO 6 -->
+
+        <div
+            class="produto"
+            data-categoria="informatica"
+            onclick="abrirProduto(6)"
+        >
+
+            <img
+                src="../Imagens/Produto teste.webp"
+                alt="Teclado Mecânico"
+                loading="lazy"
+            >
+
+            <h2>
+                Teclado Mecânico
+            </h2>
+
+            <p>
+                R$ 250,00
+            </p>
+
+            <button>
+                Ver produto
+            </button>
+
         </div>
 
-        <div class="produto" data-categoria="acessorios">
 
-            <img src="../Imagens/Produto teste.webp" alt="" loading="lazy">
-            <h2>Produto 7</h2>
-            <p>R$ 250,00</p>
-            <button onclick="comprar('Produto 7')">Comprar</button>
+
+        <!-- PRODUTO 7 -->
+
+        <div
+            class="produto"
+            data-categoria="acessorios"
+            onclick="abrirProduto(7)"
+        >
+
+            <img
+                src="../Imagens/Produto teste.webp"
+                alt="Boné"
+                loading="lazy"
+            >
+
+            <h2>
+                Boné
+            </h2>
+
+            <p>
+                R$ 250,00
+            </p>
+
+            <button>
+                Ver produto
+            </button>
+
         </div>
 
-        <div class="produto" data-categoria="outros">
 
-            <img src="../Imagens/Produto teste.webp" alt="" loading="lazy">
-            <h2>Produto 8</h2>
-            <p>R$ 250,00</p>
-            <button onclick="comprar('Produto 8')">Comprar</button>
+
+        <!-- PRODUTO 8 -->
+
+        <div
+            class="produto"
+            data-categoria="outros"
+            onclick="abrirProduto(8)"
+        >
+
+            <img
+                src="../Imagens/Produto teste.webp"
+                alt="Caneca Personalizada"
+                loading="lazy"
+            >
+
+            <h2>
+                Caneca Personalizada
+            </h2>
+
+            <p>
+                R$ 250,00
+            </p>
+
+            <button>
+                Ver produto
+            </button>
+
         </div>
 
-        <div class="produto" data-categoria="roupas">
-            
-            <img src="../Imagens/Produto teste.webp" alt="" loading="lazy">
-            <h2>Produto 9</h2>
-            <p>R$ 250,00</p>
-            <button onclick="comprar('Produto 9')">Comprar</button>
+
+
+        <!-- PRODUTO 9 -->
+
+        <div
+            class="produto"
+            data-categoria="roupas"
+            onclick="abrirProduto(9)"
+        >
+
+            <img
+                src="../Imagens/Produto teste.webp"
+                alt="Calça Cargo"
+                loading="lazy"
+            >
+
+            <h2>
+                Calça Cargo
+            </h2>
+
+            <p>
+                R$ 250,00
+            </p>
+
+            <button>
+                Ver produto
+            </button>
+
         </div>
 
-        <div class="produto" data-categoria="informatica">
 
-            <img src="../Imagens/Produto teste.webp" alt="" loading="lazy">
-            <h2>Produto 10</h2>
-            <p>R$ 250,00</p>
-            <button onclick="comprar('Produto 10')">Comprar</button>
+
+        <!-- PRODUTO 10 -->
+
+        <div
+            class="produto"
+            data-categoria="informatica"
+            onclick="abrirProduto(10)"
+        >
+
+            <img
+                src="../Imagens/Produto teste.webp"
+                alt="Headset Gamer"
+                loading="lazy"
+            >
+
+            <h2>
+                Headset Gamer
+            </h2>
+
+            <p>
+                R$ 250,00
+            </p>
+
+            <button>
+                Ver produto
+            </button>
+
         </div>
+
 
     </main>
 
+
+
     <script src="produtos.js"></script>
+
+
 </body>
+
 </html>
