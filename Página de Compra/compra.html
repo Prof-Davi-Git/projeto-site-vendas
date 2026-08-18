@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Página de Compra</title>
+
+    <link rel="stylesheet" href="compra.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- FAIXA SUPERIOR -->
+
+    <div class="barra-topo">
+
+        FRETE GRÁTIS PARA TODO O PAÍS 🚚
+
+    </div>
+
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <img
+            src="/Imagens/LOJA TESTE (1).png"
+            alt="Logo da loja"
+        >
+
+    </header>
+
+
+
+    <!-- MENU -->
+
+    <nav class="menu">
+
+        <a href="/Página de Início/inicio.html">
+            INÍCIO
+        </a>
+
+        <a href="/Página de Produtos/produtos.html">
+            PRODUTOS
+        </a>
+
+        <a href="#">
+            PROMOÇÕES
+        </a>
+
+        <a href="/Página de Contatos/contato.html">
+            CONTATO
+        </a>
+
+    </nav>
+
+
+
+    <!-- ÁREA DO PRODUTO -->
+
+    <main class="pagina-compra">
+
+
+        <!-- PARTE DAS FOTOS -->
+
+        <section class="galeria">
+
+
+            <!-- FOTOS PEQUENAS -->
+
+            <div class="miniaturas">
+
+                <img
+                    src="/Imagens/Produto teste.webp"
+                    alt="Modelo 1"
+                    onclick="trocarImagem(this)"
+                >
+            
+                <img
+                    src="/Imagens/Produto teste.webp"
+                    alt="Modelo 2"
+                    onclick="trocarImagem(this)"
+                >
+            
+                <img
+                    src="/Imagens/Produto teste.webp"
+                    alt="Modelo 3"
+                    onclick="trocarImagem(this)"
+                >
+            
+            </div>
+
+
+
+            <!-- FOTO GRANDE -->
+
+            <div class="foto-principal">
+
+                <img
+                    id="imagemPrincipal"
+                    src="/Imagens/Produto teste.webp"
+                    alt="Produto"
+                >
+            
+            </div>
+
+
+        </section>
+
+
+
+        <!-- PARTE DAS INFORMAÇÕES -->
+
+        <section class="informacoes">
+
+
+            <p class="categoria">
+                INFORMÁTICA
+            </p>
+
+
+            <h1>
+                Mouse Gamer
+            </h1>
+
+
+            <h2>
+                R$ 149,90
+            </h2>
+
+
+            <p class="descricao">
+
+                Mouse gamer com iluminação RGB,
+                alta precisão e design confortável.
+
+            </p>
+
+
+            <hr>
+
+
+
+            <!-- MODELO ESCOLHIDO -->
+
+            <div class="modelo">
+
+                <p>
+                    Modelo selecionado:
+                </p>
+
+                <h3>
+                    Modelo Pro
+                </h3>
+
+                <p>
+                    12000 DPI • 8 botões • RGB
+                </p>
+
+            </div>
+
+
+
+            <!-- BOTÃO AINDA SEM FUNÇÃO -->
+
+            <button class="botao-carrinho">
+
+                ADICIONAR AO CARRINHO
+
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="compra.js"></script>
+
+
+</body>
+
+</html>

@@ -1,175 +1,135 @@
+/* PÁGINA TODA */
+
 body {
-
     margin: 0;
-
     font-family: Arial, sans-serif;
-
-    background-color: #111111;
-
+    background-color: #272323;
     color: white;
-
 }
 
 
-/* BARRA SUPERIOR */
+/* FAIXA SUPERIOR */
 
 .barra-topo {
-
     background-color: white;
-
     color: black;
-
     text-align: center;
-
     padding: 10px;
-
     font-size: 13px;
-
     font-weight: bold;
-
     letter-spacing: 1px;
-
 }
 
 
 /* CABEÇALHO */
 
 header {
-
-    background-color: black;
-
-    padding: 25px;
-
+    background-color: #000000;
+    padding: 30px;
     display: flex;
-
     justify-content: center;
-
+    border-bottom: 1px solid #333;
 }
 
 
 header img {
-
-    width: 120px;
-
+    width: 150px;
     border-radius: 50%;
+    transition: 0.3s;
+}
 
+
+header img:hover {
+    transform: scale(1.05);
 }
 
 
 /* MENU */
 
 .menu {
-
     background-color: #0d0d0d;
-
     display: flex;
-
     justify-content: center;
-
     gap: 40px;
-
     padding: 18px;
-
     border-bottom: 1px solid #222;
-
 }
 
 
 .menu a {
-
     color: white;
-
     text-decoration: none;
-
     font-size: 13px;
-
     letter-spacing: 1px;
-
+    transition: 0.3s;
 }
 
 
-/* PÁGINA DE COMPRA */
+.menu a:hover {
+    color: #bfbfbf;
+}
+
+
+/* ÁREA PRINCIPAL */
 
 .pagina-compra {
-
-    max-width: 1250px;
-
-    margin: 45px auto;
-
-    padding: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 30px;
 
     display: flex;
-
     gap: 60px;
-
 }
 
 
-/* GALERIA */
+/* ========================= */
+/* LADO ESQUERDO - FOTOS */
+/* ========================= */
 
 .galeria {
-
     width: 58%;
-
     display: flex;
-
-    gap: 18px;
-
+    gap: 20px;
 }
 
 
 /* MINIATURAS */
 
 .miniaturas {
-
     width: 90px;
 
     display: flex;
-
     flex-direction: column;
 
-    gap: 12px;
-
+    gap: 15px;
 }
 
 
 .miniaturas img {
-
-    width: 75px;
-
-    height: 75px;
+    width: 80px;
+    height: 80px;
 
     object-fit: cover;
 
-    border-radius: 7px;
+    border-radius: 8px;
+
+    border: 2px solid #444;
 
     cursor: pointer;
 
-    border: 2px solid transparent;
-
     transition: 0.3s;
-
 }
 
 
 .miniaturas img:hover {
-
-    border-color: #888;
-
-}
-
-
-.miniaturas img.selecionada {
-
     border-color: white;
-
+    transform: scale(1.05);
 }
 
 
 /* FOTO GRANDE */
 
 .foto-principal {
-
     flex: 1;
 
     background-color: #1a1a1a;
@@ -177,161 +137,127 @@ header img {
     border-radius: 12px;
 
     overflow: hidden;
-
 }
 
 
 .foto-principal img {
-
     width: 100%;
-
-    height: 600px;
+    height: 550px;
 
     object-fit: cover;
 
     display: block;
-
 }
 
 
-/* INFORMAÇÕES */
+/* ========================= */
+/* LADO DIREITO */
+/* ========================= */
 
 .informacoes {
-
     width: 42%;
-
 }
 
 
-.categoria {
+/* CATEGORIA */
 
+.categoria {
     color: #999;
 
     font-size: 12px;
 
     letter-spacing: 2px;
 
+    margin-bottom: 10px;
 }
 
+
+/* NOME DO PRODUTO */
 
 .informacoes h1 {
+    font-size: 32px;
 
-    font-size: 30px;
+    margin-top: 0;
 
     margin-bottom: 15px;
-
 }
 
+
+/* PREÇO */
 
 .informacoes h2 {
+    font-size: 27px;
 
-    font-size: 28px;
+    margin-top: 0;
 
-    margin-bottom: 20px;
-
+    margin-bottom: 25px;
 }
 
 
-.descricao {
+/* DESCRIÇÃO */
 
-    color: #cfcfcf;
+.descricao {
+    color: #c7c7c7;
+
+    font-size: 15px;
 
     line-height: 24px;
 
+    margin-bottom: 25px;
 }
 
+
+/* LINHA */
 
 hr {
-
     border: none;
 
-    border-top: 1px solid #333;
+    border-top: 1px solid #444;
 
-    margin: 25px 0;
-
+    margin: 30px 0;
 }
 
 
-/* VARIAÇÃO */
+/* MODELO SELECIONADO */
 
-.area-variacao {
-
-    margin-bottom: 25px;
-
+.modelo {
+    margin-bottom: 30px;
 }
 
 
-.area-variacao strong {
+.modelo > p:first-child {
+    color: #999;
 
-    font-size: 17px;
+    font-size: 13px;
 
+    margin-bottom: 8px;
 }
 
 
-.especificacao {
+.modelo h3 {
+    font-size: 19px;
 
-    color: #aaa;
+    margin-top: 0;
+
+    margin-bottom: 10px;
+}
+
+
+.modelo > p:last-child {
+    color: #c7c7c7;
+
+    font-size: 14px;
 
     line-height: 22px;
-
-}
-
-
-/* TAMANHOS */
-
-.area-tamanhos {
-
-    margin-bottom: 30px;
-
-}
-
-
-.area-tamanhos button {
-
-    width: 48px;
-
-    height: 45px;
-
-    margin-right: 8px;
-
-    background-color: #1a1a1a;
-
-    color: white;
-
-    border: 1px solid #555;
-
-    border-radius: 50%;
-
-    cursor: pointer;
-
-}
-
-
-.area-tamanhos button:hover {
-
-    background-color: white;
-
-    color: black;
-
-}
-
-
-.area-tamanhos button.selecionado {
-
-    background-color: white;
-
-    color: black;
-
 }
 
 
 /* BOTÃO */
 
 .botao-carrinho {
-
     width: 100%;
 
-    padding: 16px;
+    padding: 17px;
 
     background-color: white;
 
@@ -347,93 +273,38 @@ hr {
 
     cursor: pointer;
 
+    transition: 0.3s;
 }
 
 
-/* DESCRIÇÃO */
-
-.descricao-completa {
-
-    margin-top: 35px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #333;
-
+.botao-carrinho:hover {
+    background-color: #d9d9d9;
 }
 
 
-.descricao-completa p {
-
-    color: #bbb;
-
-    line-height: 24px;
-
-}
-
-
-/* INFORMAÇÕES */
-
-.informacoes-extras {
-
-    margin-top: 30px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #333;
-
-}
-
-
-.informacoes-extras h3 {
-
-    font-size: 13px;
-
-    letter-spacing: 2px;
-
-    color: #aaa;
-
-}
-
-
-.informacoes-extras p {
-
-    color: #bbb;
-
-    font-size: 14px;
-
-}
-
-
+/* ========================= */
 /* CELULAR */
+/* ========================= */
 
 @media (max-width: 850px) {
 
     .pagina-compra {
-
         flex-direction: column;
-
     }
 
 
     .galeria {
-
         width: 100%;
-
     }
 
 
     .informacoes {
-
         width: 100%;
-
     }
 
 
     .foto-principal img {
-
         height: 450px;
-
     }
 
 }
