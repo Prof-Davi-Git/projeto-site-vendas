@@ -16,8 +16,6 @@
 <body>
 
 
-    <!-- FAIXA SUPERIOR -->
-
     <div class="barra-topo">
 
         FRETE GRÁTIS PARA TODO O PAÍS 🚚
@@ -25,8 +23,6 @@
     </div>
 
 
-
-    <!-- CABEÇALHO -->
 
     <header>
 
@@ -38,8 +34,6 @@
     </header>
 
 
-
-    <!-- MENU -->
 
     <nav class="menu">
 
@@ -63,57 +57,25 @@
 
 
 
-    <!-- ÁREA DO PRODUTO -->
-
     <main class="pagina-compra">
 
 
-        <!-- PARTE DAS FOTOS -->
+        <!-- FOTOS -->
 
         <section class="galeria">
 
 
-            <!-- FOTOS PEQUENAS -->
+            <!-- AS MINIATURAS SERÃO CRIADAS PELO JS -->
 
-            <div class="miniaturas">
-
-                <img
-                    src="/Imagens/Produto teste.webp"
-                    alt="Modelo Basic"
-            
-                    data-nome="Modelo Basic"
-                    data-especificacao="7200 DPI • 6 botões • RGB"
-            
-                    onclick="trocarModelo(this)"
-                >
-            
-            
-                <img
-                    src="/Imagens/Produto teste.webp"
-                    alt="Modelo Pro"
-            
-                    data-nome="Modelo Pro"
-                    data-especificacao="12000 DPI • 8 botões • RGB"
-            
-                    onclick="trocarModelo(this)"
-                >
-            
-            
-                <img
-                    src="/Imagens/Produto teste.webp"
-                    alt="Modelo Wireless"
-            
-                    data-nome="Modelo Wireless"
-                    data-especificacao="Sem fio • 10000 DPI • RGB"
-            
-                    onclick="trocarModelo(this)"
-                >
-            
+            <div
+                class="miniaturas"
+                id="miniaturas"
+            >
             </div>
 
 
 
-            <!-- FOTO GRANDE -->
+            <!-- FOTO PRINCIPAL -->
 
             <div class="foto-principal">
 
@@ -122,7 +84,7 @@
                     src="/Imagens/Produto teste.webp"
                     alt="Produto"
                 >
-            
+
             </div>
 
 
@@ -130,31 +92,30 @@
 
 
 
-        <!-- PARTE DAS INFORMAÇÕES -->
+        <!-- INFORMAÇÕES -->
 
         <section class="informacoes">
 
 
-            <p class="categoria">
-                INFORMÁTICA
+            <p
+                class="categoria"
+                id="categoriaProduto"
+            >
             </p>
 
 
-            <h1>
-                Mouse Gamer
+            <h1 id="nomeProduto">
             </h1>
 
 
-            <h2>
-                R$ 149,90
+            <h2 id="precoProduto">
             </h2>
 
 
-            <p class="descricao">
-
-                Mouse gamer com iluminação RGB,
-                alta precisão e design confortável.
-
+            <p
+                class="descricao"
+                id="descricaoProduto"
+            >
             </p>
 
 
@@ -166,56 +127,49 @@
 
             <div class="modelo">
 
+
                 <p>
                     Modelo selecionado:
                 </p>
-            
-            
+
+
                 <h3 id="nomeModelo">
-                    Modelo Basic
                 </h3>
-            
-            
+
+
                 <p id="especificacaoModelo">
-                    7200 DPI • 6 botões • RGB
                 </p>
-            
+
+
             </div>
-            
 
-            <!-- TAMANHOS - USADO SOMENTE PARA ROUPAS -->
 
-            <div class="area-tamanhos" id="areaTamanhos">
+
+            <!-- TAMANHOS -->
+
+            <div
+                class="area-tamanhos"
+                id="areaTamanhos"
+            >
+
 
                 <p>
                     Escolha o tamanho:
                 </p>
 
-                <div class="tamanhos">
 
-                    <button onclick="selecionarTamanho(this)">
-                        P
-                    </button>
-
-                    <button onclick="selecionarTamanho(this)">
-                        M
-                    </button>
-
-                    <button onclick="selecionarTamanho(this)">
-                        G
-                    </button>
-
-                    <button onclick="selecionarTamanho(this)">
-                        GG
-                    </button>
-
+                <div
+                    class="tamanhos"
+                    id="tamanhos"
+                >
                 </div>
+
 
             </div>
 
 
 
-            <!-- BOTÃO AINDA SEM FUNÇÃO -->
+            <!-- AINDA SEM FUNÇÃO -->
 
             <button class="botao-carrinho">
 

@@ -1,6 +1,9 @@
 
-function comprar(produto) {
-    alert("Você comprou: " + produto);
+function abrirProduto(id) {
+
+    window.location.href =
+        "/Página de Compra/compra.html?id=" + id;
+
 }
 
 function abrirCategorias() {

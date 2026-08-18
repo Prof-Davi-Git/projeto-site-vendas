@@ -126,6 +126,10 @@ header img:hover {
     transform: scale(1.05);
 }
 
+.miniaturas img.selecionada {
+    border-color: white;
+}
+
 
 /* FOTO GRANDE */
 
@@ -254,6 +258,7 @@ hr {
 /* TAMANHOS */
 
 .area-tamanhos {
+    display: none;
     margin-bottom: 30px;
 }
 
