@@ -27,3 +27,22 @@ function trocarModelo(imagem) {
 
 
 }
+
+function selecionarTamanho(botao) {
+
+
+    let botoes =
+        document.querySelectorAll(".tamanhos button");
+
+
+    botoes.forEach(function(item) {
+
+        item.classList.remove("selecionado");
+
+    });
+
+
+    botao.classList.add("selecionado");
+
+
+}

@@ -251,6 +251,53 @@ hr {
     line-height: 22px;
 }
 
+/* TAMANHOS */
+
+.area-tamanhos {
+    margin-bottom: 30px;
+}
+
+
+.area-tamanhos > p {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+
+.tamanhos {
+    display: flex;
+    gap: 10px;
+}
+
+
+.tamanhos button {
+    width: 48px;
+    height: 45px;
+
+    background-color: #1a1a1a;
+    color: white;
+
+    border: 1px solid #555;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.tamanhos button:hover {
+    background-color: #333;
+}
+
+
+.tamanhos button.selecionado {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
 
 /* BOTÃO */
 
