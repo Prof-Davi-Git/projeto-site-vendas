@@ -79,20 +79,34 @@
 
                 <img
                     src="/Imagens/Produto teste.webp"
-                    alt="Modelo 1"
-                    onclick="trocarImagem(this)"
+                    alt="Modelo Basic"
+            
+                    data-nome="Modelo Basic"
+                    data-especificacao="7200 DPI • 6 botões • RGB"
+            
+                    onclick="trocarModelo(this)"
                 >
+            
             
                 <img
                     src="/Imagens/Produto teste.webp"
-                    alt="Modelo 2"
-                    onclick="trocarImagem(this)"
+                    alt="Modelo Pro"
+            
+                    data-nome="Modelo Pro"
+                    data-especificacao="12000 DPI • 8 botões • RGB"
+            
+                    onclick="trocarModelo(this)"
                 >
+            
             
                 <img
                     src="/Imagens/Produto teste.webp"
-                    alt="Modelo 3"
-                    onclick="trocarImagem(this)"
+                    alt="Modelo Wireless"
+            
+                    data-nome="Modelo Wireless"
+                    data-especificacao="Sem fio • 10000 DPI • RGB"
+            
+                    onclick="trocarModelo(this)"
                 >
             
             </div>
@@ -155,15 +169,17 @@
                 <p>
                     Modelo selecionado:
                 </p>
-
-                <h3>
-                    Modelo Pro
+            
+            
+                <h3 id="nomeModelo">
+                    Modelo Basic
                 </h3>
-
-                <p>
-                    12000 DPI • 8 botões • RGB
+            
+            
+                <p id="especificacaoModelo">
+                    7200 DPI • 6 botões • RGB
                 </p>
-
+            
             </div>
 
 
