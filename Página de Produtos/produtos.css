@@ -1,0 +1,303 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #272323;
+    color: white;
+}
+
+h2 {
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+p {
+    color: #cfcfcf;
+    font-size: 14px;
+}
+
+header input {
+    margin-top: 20px;
+    width: 300px;
+    padding: 14px;
+    border-radius: 30px;
+    border: 1px solid #333;
+    background-color: #1c1c1c;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+header {
+    background-color: #000000;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+header img {
+    width: 150px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(255,255,255,0.15);
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px;
+}
+
+.produto {
+    background-color: #1a1a1a;
+    width: 220px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #2b2b2b;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+.produto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #d9d9d9;
+}
+
+.barra-topo {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 18px;
+    border-bottom: 1px solid #222;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #bfbfbf;
+}
+
+/* PÁGINA DE CONTATO */
+
+.suporte {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.suporte h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.suporte input {
+    width: 400px;
+    max-width: 90%;
+    padding: 16px;
+    border-radius: 30px;
+    border: 1px solid #333;
+    background-color: #1c1c1c;
+    color: white;
+    outline: none;
+    font-size: 15px;
+}
+
+.faq {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.pergunta {
+    background-color: #1a1a1a;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s;
+}
+
+.pergunta:hover {
+    border-color: #555;
+}
+
+.pergunta h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.pergunta p {
+    color: #bdbdbd;
+    margin-bottom: 0;
+}
+
+
+.area-categorias {
+    margin: 20px 40px;
+}
+
+.botao-categorias {
+    width: auto;
+
+    padding: 12px 25px;
+
+    background-color: white;
+    color: black;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.menu-categorias {
+    display: none;
+
+    margin-top: 15px;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.menu-categorias button {
+    width: auto;
+
+    padding: 10px 20px;
+
+    background-color: #1a1a1a;
+    color: white;
+
+    border: 1px solid #555;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.menu-categorias button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* ÁREA DE CATEGORIAS */
+
+.area-categorias {
+    background-color: #0d0d0d;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+
+/* BOTÃO CATEGORIAS */
+
+.botao-categorias {
+    width: auto;
+    background-color: transparent;
+    color: white;
+
+    border: none;
+
+    padding: 16px 20px;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao-categorias:hover {
+    background-color: transparent;
+    color: #bfbfbf;
+}
+
+
+/* MENU QUE ABRE */
+
+.menu-categorias {
+    display: none;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding: 15px 30px 20px;
+
+    background-color: #151515;
+}
+
+
+/* CADA CATEGORIA */
+
+.menu-categorias button {
+    width: auto;
+
+    background-color: transparent;
+    color: white;
+
+    border: none;
+
+    padding: 8px 5px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.menu-categorias button:hover {
+    background-color: transparent;
+    color: #bfbfbf;
+
+    transform: translateY(-2px);
+}

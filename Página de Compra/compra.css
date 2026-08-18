@@ -1,0 +1,439 @@
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #111111;
+
+    color: white;
+
+}
+
+
+/* BARRA SUPERIOR */
+
+.barra-topo {
+
+    background-color: white;
+
+    color: black;
+
+    text-align: center;
+
+    padding: 10px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* CABEÇALHO */
+
+header {
+
+    background-color: black;
+
+    padding: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+header img {
+
+    width: 120px;
+
+    border-radius: 50%;
+
+}
+
+
+/* MENU */
+
+.menu {
+
+    background-color: #0d0d0d;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    padding: 18px;
+
+    border-bottom: 1px solid #222;
+
+}
+
+
+.menu a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* PÁGINA DE COMPRA */
+
+.pagina-compra {
+
+    max-width: 1250px;
+
+    margin: 45px auto;
+
+    padding: 30px;
+
+    display: flex;
+
+    gap: 60px;
+
+}
+
+
+/* GALERIA */
+
+.galeria {
+
+    width: 58%;
+
+    display: flex;
+
+    gap: 18px;
+
+}
+
+
+/* MINIATURAS */
+
+.miniaturas {
+
+    width: 90px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.miniaturas img {
+
+    width: 75px;
+
+    height: 75px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    transition: 0.3s;
+
+}
+
+
+.miniaturas img:hover {
+
+    border-color: #888;
+
+}
+
+
+.miniaturas img.selecionada {
+
+    border-color: white;
+
+}
+
+
+/* FOTO GRANDE */
+
+.foto-principal {
+
+    flex: 1;
+
+    background-color: #1a1a1a;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+
+.foto-principal img {
+
+    width: 100%;
+
+    height: 600px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* INFORMAÇÕES */
+
+.informacoes {
+
+    width: 42%;
+
+}
+
+
+.categoria {
+
+    color: #999;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.informacoes h1 {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.informacoes h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.descricao {
+
+    color: #cfcfcf;
+
+    line-height: 24px;
+
+}
+
+
+hr {
+
+    border: none;
+
+    border-top: 1px solid #333;
+
+    margin: 25px 0;
+
+}
+
+
+/* VARIAÇÃO */
+
+.area-variacao {
+
+    margin-bottom: 25px;
+
+}
+
+
+.area-variacao strong {
+
+    font-size: 17px;
+
+}
+
+
+.especificacao {
+
+    color: #aaa;
+
+    line-height: 22px;
+
+}
+
+
+/* TAMANHOS */
+
+.area-tamanhos {
+
+    margin-bottom: 30px;
+
+}
+
+
+.area-tamanhos button {
+
+    width: 48px;
+
+    height: 45px;
+
+    margin-right: 8px;
+
+    background-color: #1a1a1a;
+
+    color: white;
+
+    border: 1px solid #555;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+}
+
+
+.area-tamanhos button:hover {
+
+    background-color: white;
+
+    color: black;
+
+}
+
+
+.area-tamanhos button.selecionado {
+
+    background-color: white;
+
+    color: black;
+
+}
+
+
+/* BOTÃO */
+
+.botao-carrinho {
+
+    width: 100%;
+
+    padding: 16px;
+
+    background-color: white;
+
+    color: black;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao-completa {
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #333;
+
+}
+
+
+.descricao-completa p {
+
+    color: #bbb;
+
+    line-height: 24px;
+
+}
+
+
+/* INFORMAÇÕES */
+
+.informacoes-extras {
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #333;
+
+}
+
+
+.informacoes-extras h3 {
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    color: #aaa;
+
+}
+
+
+.informacoes-extras p {
+
+    color: #bbb;
+
+    font-size: 14px;
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 850px) {
+
+    .pagina-compra {
+
+        flex-direction: column;
+
+    }
+
+
+    .galeria {
+
+        width: 100%;
+
+    }
+
+
+    .informacoes {
+
+        width: 100%;
+
+    }
+
+
+    .foto-principal img {
+
+        height: 450px;
+
+    }
+
+}

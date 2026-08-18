@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="/Página de Produtos/produtos.css">
+</head>
+<body>
+
+    <div class="barra-topo">
+        FRETE GRÁTIS PARA TODO O PAÍS 🚚
+    </div>
+
+    <header>
+        
+        <img src="/Imagens/LOJA TESTE (1).png" alt="">
+
+        <input 
+            type="text"
+            id="pesquisa" 
+            placeholder="O que você procura?"
+            onkeyup="filtrarProdutos()"
+        >
+
+    </header>
+
+    <nav class="menu">
+        <a href="/Página de Início/inicio.html">INÍCIO</a>
+        <a href="/Página de Produtos/produtos.html">PRODUTOS</a>
+        <a href="#">PROMOÇÕES</a>
+        <a href="/Página de Contatos/contato.html">CONTATO</a>
+    </nav>
+
+    <div class="area-categorias">
+
+        <button class="botao-categorias" onclick="abrirCategorias()">
+            CATEGORIAS ▼
+        </button>
+    
+        <div class="menu-categorias" id="menuCategorias">
+    
+            <button onclick="filtrarCategoria('todos')">
+                TODOS
+            </button>
+    
+            <button onclick="filtrarCategoria('roupas')">
+                ROUPAS
+            </button>
+    
+            <button onclick="filtrarCategoria('informatica')">
+                INFORMÁTICA
+            </button>
+    
+            <button onclick="filtrarCategoria('acessorios')">
+                ACESSÓRIOS
+            </button>
+    
+            <button onclick="filtrarCategoria('outros')">
+                OUTROS
+            </button>
+    
+        </div>
+    
+    </div>
+
+
+    <main class="produtos">
+
+        <div class="produto" data-categoria="roupas">
+
+            <img src="/Imagens/Produto teste.webp" alt="" loading="lazy">
+            <h2>Produto 1</h2>
+            <p>R$ 100,00</p>
+            <button onclick="comprar('Produto 1')">Comprar</button>
+        </div>
+
+        <div class="produto" data-categoria="informatica">
+
+            <img src="/Imagens/Produto teste.webp" alt="" loading="lazy">
+            <h2>Produto 2</h2>
+            <p>R$ 150,00</p>
+            <button onclick="comprar('Produto 2')">Comprar</button>
+        </div>
+
+        <div class="produto" data-categoria="acessorios">
+
+            <img src="/Imagens/Produto teste.webp" alt="" loading="lazy">
+            <h2>Produto 3</h2>
+            <p>R$ 200,00</p>
+            <button onclick="comprar('Produto 3')">Comprar</button>
+        </div>
+
+        <div class="produto" data-categoria="outros">
+
+            <img src="/Imagens/Produto teste.webp" alt="" loading="lazy">
+            <h2>Produto 4</h2>
+            <p>R$ 250,00</p>
+            <button onclick="comprar('Produto 4')">Comprar</button>
+        </div>
+
+        <div class="produto" data-categoria="roupas">
+
+            <img src="/Imagens/Produto teste.webp" alt="" loading="lazy">
+            <h2>Produto 5</h2>
+            <p>R$ 250,00</p>
+            <button onclick="comprar('Produto 5')">Comprar</button>
+        </div>
+
+        <div class="produto" data-categoria="informatica">
+
+            <img src="/Imagens/Produto teste.webp" alt="" loading="lazy">
+            <h2>Produto 6</h2>
+            <p>R$ 250,00</p>
+            <button onclick="comprar('Produto 6')">Comprar</button>
+        </div>
+
+        <div class="produto" data-categoria="acessorios">
+
+            <img src="/Imagens/Produto teste.webp" alt="" loading="lazy">
+            <h2>Produto 7</h2>
+            <p>R$ 250,00</p>
+            <button onclick="comprar('Produto 7')">Comprar</button>
+        </div>
+
+        <div class="produto" data-categoria="outros">
+
+            <img src="/Imagens/Produto teste.webp" alt="" loading="lazy">
+            <h2>Produto 8</h2>
+            <p>R$ 250,00</p>
+            <button onclick="comprar('Produto 8')">Comprar</button>
+        </div>
+
+        <div class="produto" data-categoria="roupas">
+            
+            <img src="/Imagens/Produto teste.webp" alt="" loading="lazy">
+            <h2>Produto 9</h2>
+            <p>R$ 250,00</p>
+            <button onclick="comprar('Produto 9')">Comprar</button>
+        </div>
+
+        <div class="produto" data-categoria="informatica">
+
+            <img src="/Imagens/Produto teste.webp" alt="" loading="lazy">
+            <h2>Produto 10</h2>
+            <p>R$ 250,00</p>
+            <button onclick="comprar('Produto 10')">Comprar</button>
+        </div>
+
+    </main>
+
+    <script src="/Página de Produtos/produtos.js"></script>
+</body>
+</html>
