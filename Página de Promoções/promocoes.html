@@ -50,13 +50,14 @@
     </section>
 
     <!-- ATUALIZAÇÃO 01/09 - CARROSSEL DE ROUPAS -->
-    <section class="secao-promocao">
+    <section class="secao-promocao" id="secao-roupas">
         <div class="titulo-secao">
             <div>
                 <span>01</span>
                 <h2>ROUPAS</h2>
             </div>
-            <p>8 produtos em promoção</p>
+            <!-- ATUALIZAÇÃO 01/09 - QUANTIDADE ATUALIZADA AUTOMATICAMENTE PELO JAVASCRIPT -->
+            <p id="quantidade-roupas">8 produtos em promoção</p>
         </div>
 
         <div class="estrutura-carrossel">
@@ -76,13 +77,14 @@
     </section>
 
     <!-- ATUALIZAÇÃO 01/09 - CARROSSEL DE INFORMÁTICA -->
-    <section class="secao-promocao">
+    <section class="secao-promocao" id="secao-informatica">
         <div class="titulo-secao">
             <div>
                 <span>02</span>
                 <h2>INFORMÁTICA</h2>
             </div>
-            <p>8 produtos em promoção</p>
+            <!-- ATUALIZAÇÃO 01/09 - QUANTIDADE ATUALIZADA AUTOMATICAMENTE PELO JAVASCRIPT -->
+            <p id="quantidade-informatica">8 produtos em promoção</p>
         </div>
 
         <div class="estrutura-carrossel">
@@ -98,58 +100,6 @@
             </div>
 
             <button class="seta-carrossel" onclick="moverCarrossel('informatica', 1)" aria-label="Avançar">›</button>
-        </div>
-    </section>
-
-    <!-- ATUALIZAÇÃO 01/09 - CARROSSEL DE ACESSÓRIOS -->
-    <section class="secao-promocao">
-        <div class="titulo-secao">
-            <div>
-                <span>03</span>
-                <h2>ACESSÓRIOS</h2>
-            </div>
-            <p>8 produtos em promoção</p>
-        </div>
-
-        <div class="estrutura-carrossel">
-            <button class="seta-carrossel" onclick="moverCarrossel('acessorios', -1)" aria-label="Voltar">‹</button>
-
-            <div
-                class="janela-carrossel"
-                id="janela-acessorios"
-                onmouseenter="pararCarrossel('acessorios')"
-                onmouseleave="iniciarCarrossel('acessorios')"
-            >
-                <div class="carrossel" id="carrossel-acessorios"></div>
-            </div>
-
-            <button class="seta-carrossel" onclick="moverCarrossel('acessorios', 1)" aria-label="Avançar">›</button>
-        </div>
-    </section>
-
-    <!-- ATUALIZAÇÃO 01/09 - CARROSSEL DE OUTROS -->
-    <section class="secao-promocao">
-        <div class="titulo-secao">
-            <div>
-                <span>04</span>
-                <h2>OUTROS</h2>
-            </div>
-            <p>8 produtos em promoção</p>
-        </div>
-
-        <div class="estrutura-carrossel">
-            <button class="seta-carrossel" onclick="moverCarrossel('outros', -1)" aria-label="Voltar">‹</button>
-
-            <div
-                class="janela-carrossel"
-                id="janela-outros"
-                onmouseenter="pararCarrossel('outros')"
-                onmouseleave="iniciarCarrossel('outros')"
-            >
-                <div class="carrossel" id="carrossel-outros"></div>
-            </div>
-
-            <button class="seta-carrossel" onclick="moverCarrossel('outros', 1)" aria-label="Avançar">›</button>
         </div>
     </section>
 
