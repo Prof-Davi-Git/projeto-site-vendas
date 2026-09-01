@@ -357,3 +357,44 @@ footer p {
         flex-basis: 240px;
     }
 }
+
+/* ATUALIZAÇÃO 01/09 - AJUSTE PARA MOSTRAR OS PRODUTOS COMPLETOS NO CARROSSEL */
+.janela-carrossel {
+    scroll-snap-type: x mandatory;
+}
+
+/* ATUALIZAÇÃO 01/09 - QUATRO PRODUTOS COMPLETOS EM TELAS MAIORES */
+.carrossel {
+    width: 100%;
+}
+
+.card-promocao {
+    width: calc((100% - 60px) / 4);
+    flex: 0 0 calc((100% - 60px) / 4);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* ATUALIZAÇÃO 01/09 - TRÊS PRODUTOS COMPLETOS EM TELAS MÉDIAS */
+@media (max-width: 1100px) {
+    .card-promocao {
+        width: calc((100% - 40px) / 3);
+        flex-basis: calc((100% - 40px) / 3);
+    }
+}
+
+/* ATUALIZAÇÃO 01/09 - DOIS PRODUTOS COMPLETOS EM TELAS MENORES */
+@media (max-width: 800px) {
+    .card-promocao {
+        width: calc((100% - 20px) / 2);
+        flex-basis: calc((100% - 20px) / 2);
+    }
+}
+
+/* ATUALIZAÇÃO 01/09 - UM PRODUTO COMPLETO NO CELULAR */
+@media (max-width: 520px) {
+    .card-promocao {
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
