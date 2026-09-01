@@ -1,0 +1,349 @@
+/* ATUALIZAÇÃO 01/09 - TODO ESTE ARQUIVO FOI CRIADO NESTA ATUALIZAÇÃO */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: white;
+}
+
+/* ATUALIZAÇÃO 01/09 - BARRA SUPERIOR */
+.barra-topo {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ATUALIZAÇÃO 01/09 - CABEÇALHO */
+header {
+    background-color: black;
+    padding: 24px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    border-bottom: 1px solid #222;
+}
+
+header img {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.chamada-promocao span {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #555;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.chamada-promocao p {
+    margin: 10px 0 0;
+    color: #bdbdbd;
+    font-size: 13px;
+}
+
+/* ATUALIZAÇÃO 01/09 - MENU */
+.menu {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 18px;
+    border-bottom: 1px solid #222;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: #bfbfbf;
+}
+
+/* ATUALIZAÇÃO 01/09 - DESTAQUE */
+.hero-promocao {
+    min-height: 360px;
+    padding: 70px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        linear-gradient(120deg, rgba(0,0,0,0.96), rgba(42,22,22,0.90)),
+        url("../Imagens/banner.png") center/cover;
+    border-bottom: 1px solid #292929;
+}
+
+.hero-promocao .etiqueta {
+    width: fit-content;
+    margin: 0 0 18px;
+    padding: 8px 14px;
+    border: 1px solid #5d5d5d;
+    border-radius: 30px;
+    color: #d6d6d6;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.hero-promocao h1 {
+    margin: 0;
+    font-size: 54px;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.hero-promocao > p:last-child {
+    max-width: 640px;
+    margin: 22px 0 0;
+    color: #c8c8c8;
+    line-height: 25px;
+}
+
+/* ATUALIZAÇÃO 01/09 - SEÇÕES DOS CARROSSÉIS */
+.secao-promocao {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 65px 30px 10px;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.titulo-secao > div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.titulo-secao span {
+    color: #777;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.titulo-secao h2 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.titulo-secao p {
+    margin: 0;
+    color: #8d8d8d;
+    font-size: 13px;
+}
+
+/* ATUALIZAÇÃO 01/09 - ESTRUTURA DO CARROSSEL */
+.estrutura-carrossel {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.janela-carrossel {
+    flex: 1;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding: 8px 2px 18px;
+}
+
+.janela-carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.carrossel {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+
+.seta-carrossel {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    border-radius: 50%;
+    border: 1px solid #444;
+    background-color: #191919;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.seta-carrossel:hover {
+    background-color: white;
+    color: black;
+}
+
+/* ATUALIZAÇÃO 01/09 - CARD PROMOCIONAL */
+.card-promocao {
+    width: 270px;
+    flex: 0 0 270px;
+    position: relative;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    border: 1px solid #303030;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-promocao:hover {
+    transform: translateY(-7px);
+    border-color: #666;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+}
+
+.card-promocao > img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.selo-desconto {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 8px 11px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.conteudo-card {
+    padding: 20px;
+}
+
+.categoria-card {
+    margin: 0 0 8px;
+    color: #8f8f8f;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.conteudo-card h3 {
+    min-height: 44px;
+    margin: 0 0 14px;
+    font-size: 18px;
+}
+
+.preco-antigo {
+    margin: 0 0 5px;
+    color: #848484;
+    font-size: 14px;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.preco-promocional {
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.validade-promocao {
+    margin: 12px 0 18px;
+    color: #b5b5b5;
+    font-size: 12px;
+}
+
+.conteudo-card button {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #4a4a4a;
+    border-radius: 7px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-promocao:hover button {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+/* ATUALIZAÇÃO 01/09 - RODAPÉ */
+footer {
+    margin-top: 70px;
+    padding: 30px;
+    background-color: black;
+    border-top: 1px solid #222;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: #999;
+    font-size: 13px;
+}
+
+/* ATUALIZAÇÃO 01/09 - RESPONSIVIDADE */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .hero-promocao {
+        min-height: 300px;
+        padding: 50px 25px;
+    }
+
+    .hero-promocao h1 {
+        font-size: 38px;
+    }
+
+    .secao-promocao {
+        padding: 50px 15px 0;
+    }
+
+    .titulo-secao {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .seta-carrossel {
+        display: none;
+    }
+
+    .card-promocao {
+        width: 240px;
+        flex-basis: 240px;
+    }
+}
