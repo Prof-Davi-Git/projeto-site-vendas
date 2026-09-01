@@ -4,10 +4,11 @@ function normalizarTextoPesquisa(texto) {
     return texto
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+/g, "")
         .toLowerCase();
 }
 
-// ATUALIZAÇÃO 01/09 - LOCALIZA O PRODUTO DIGITADO E LEVA O USUÁRIO ATÉ O CARD
+// ATUALIZAÇÃO 01/09 - LOCALIZA O PRIMEIRO PRODUTO ENCONTRADO E LEVA O USUÁRIO ATÉ O CARD
 function pesquisarPromocao() {
     const campoPesquisa = document.getElementById("pesquisaPromocao");
     const mensagem = document.getElementById("resultadoPesquisaPromocao");
@@ -16,7 +17,7 @@ function pesquisarPromocao() {
         return;
     }
 
-    const termo = normalizarTextoPesquisa(campoPesquisa.value.trim());
+    const termo = normalizarTextoPesquisa(campoPesquisa.value);
 
     document.querySelectorAll(".card-promocao.encontrado").forEach(function(card) {
         card.classList.remove("encontrado");
@@ -30,11 +31,8 @@ function pesquisarPromocao() {
     const cards = document.querySelectorAll(".card-promocao");
     let cardEncontrado = null;
 
-    cards.forEach(function(card) {
-        if (cardEncontrado) {
-            return;
-        }
-
+    // ATUALIZAÇÃO 01/09 - PARA NO PRIMEIRO PRODUTO QUE COMBINAR COM A PESQUISA
+    for (const card of cards) {
         const nomeProduto = card.querySelector("h3");
 
         if (
@@ -42,11 +40,13 @@ function pesquisarPromocao() {
             normalizarTextoPesquisa(nomeProduto.textContent).includes(termo)
         ) {
             cardEncontrado = card;
+            break;
         }
-    });
+    }
 
+    // ATUALIZAÇÃO 01/09 - MENSAGEM QUANDO NÃO EXISTE PRODUTO COMPATÍVEL
     if (!cardEncontrado) {
-        mensagem.textContent = "Nenhum produto promocional encontrado.";
+        mensagem.textContent = "Produto não encontrado.";
         mensagem.classList.add("sem-resultado");
         return;
     }
@@ -92,3 +92,18 @@ function pesquisarPromocao() {
         cardEncontrado.classList.remove("encontrado");
     }, 5000);
 }
+
+// ATUALIZAÇÃO 01/09 - A PESQUISA SÓ É EXECUTADA QUANDO A TECLA ENTER É PRESSIONADA
+document.addEventListener("DOMContentLoaded", function() {
+    const campoPesquisa = document.getElementById("pesquisaPromocao");
+
+    if (!campoPesquisa) {
+        return;
+    }
+
+    campoPesquisa.addEventListener("keydown", function(evento) {
+        if (evento.key === "Enter") {
+            pesquisarPromocao();
+        }
+    });
+});
