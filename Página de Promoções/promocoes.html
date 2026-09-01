@@ -20,11 +20,16 @@
     <header>
         <img src="../Imagens/LOJA TESTE (1).png" alt="Logo da loja">
 
-        <!-- ATUALIZAÇÃO 01/09 - BARRA DE PESQUISA MANTIDA NO MESMO PADRÃO VISUAL DA LOJA -->
+        <!-- ATUALIZAÇÃO 01/09 - BARRA DE PESQUISA COM LOCALIZAÇÃO AUTOMÁTICA DO PRODUTO -->
         <input
             type="text"
+            id="pesquisaPromocao"
             placeholder="O que você procura?"
+            oninput="pesquisarPromocao()"
         >
+
+        <!-- ATUALIZAÇÃO 01/09 - MENSAGEM DA PESQUISA -->
+        <p id="resultadoPesquisaPromocao" class="mensagem-pesquisa"></p>
     </header>
 
     <!-- ATUALIZAÇÃO 01/09 - MENU -->
@@ -156,6 +161,9 @@
 
     <!-- ATUALIZAÇÃO 01/09 - ARQUIVO DOS PRODUTOS E DOS CARROSSÉIS -->
     <script src="produtos-promocao.js"></script>
+
+    <!-- ATUALIZAÇÃO 01/09 - ARQUIVO DA PESQUISA DOS PRODUTOS PROMOCIONAIS -->
+    <script src="pesquisa-promocao.js"></script>
 
 </body>
 </html>
