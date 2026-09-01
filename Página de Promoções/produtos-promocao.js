@@ -264,284 +264,45 @@ const produtosPromocao = {
             { nome: "USB 3.0", especificacao: "4 portas • USB 3.0", imagem: "../Imagens/Produto teste.webp" },
             { nome: "USB-C", especificacao: "4 portas • Conector USB-C", imagem: "../Imagens/Produto teste.webp" }
         ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 17
-    17: {
-        categoria: "ACESSÓRIOS",
-        nome: "Mochila Executiva",
-        precoOriginal: "R$ 239,90",
-        precoPromocional: "R$ 169,90",
-        desconto: "29% OFF",
-        validade: "30/09/2026",
-        descricao: "Mochila com divisórias para trabalho e estudos.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preta", especificacao: "30 litros • Compartimento para notebook", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Cinza", especificacao: "30 litros • Compartimento para notebook", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 18
-    18: {
-        categoria: "ACESSÓRIOS",
-        nome: "Boné Classic",
-        precoOriginal: "R$ 99,90",
-        precoPromocional: "R$ 69,90",
-        desconto: "30% OFF",
-        validade: "30/09/2026",
-        descricao: "Boné ajustável com visual minimalista.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preto", especificacao: "Ajustável • Bordado frontal", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Branco", especificacao: "Ajustável • Bordado frontal", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 19
-    19: {
-        categoria: "ACESSÓRIOS",
-        nome: "Carteira Slim",
-        precoOriginal: "R$ 119,90",
-        precoPromocional: "R$ 79,90",
-        desconto: "33% OFF",
-        validade: "30/09/2026",
-        descricao: "Carteira compacta para cartões e documentos.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preta", especificacao: "6 divisórias • Material sintético", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Marrom", especificacao: "6 divisórias • Material sintético", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 20
-    20: {
-        categoria: "ACESSÓRIOS",
-        nome: "Óculos Urban",
-        precoOriginal: "R$ 159,90",
-        precoPromocional: "R$ 109,90",
-        desconto: "31% OFF",
-        validade: "30/09/2026",
-        descricao: "Óculos com armação moderna e proteção UV.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preto", especificacao: "Lente escura • Proteção UV", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Transparente", especificacao: "Armação transparente • Proteção UV", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 21
-    21: {
-        categoria: "ACESSÓRIOS",
-        nome: "Relógio Minimal",
-        precoOriginal: "R$ 249,90",
-        precoPromocional: "R$ 179,90",
-        desconto: "28% OFF",
-        validade: "30/09/2026",
-        descricao: "Relógio casual com design minimalista.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preto", especificacao: "Pulseira preta • Mostrador escuro", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Prata", especificacao: "Pulseira prata • Mostrador claro", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 22
-    22: {
-        categoria: "ACESSÓRIOS",
-        nome: "Cinto Casual",
-        precoOriginal: "R$ 109,90",
-        precoPromocional: "R$ 74,90",
-        desconto: "32% OFF",
-        validade: "30/09/2026",
-        descricao: "Cinto versátil para diferentes combinações.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preto", especificacao: "Fivela metálica • Cor preta", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Marrom", especificacao: "Fivela metálica • Cor marrom", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 23
-    23: {
-        categoria: "ACESSÓRIOS",
-        nome: "Bolsa Transversal",
-        precoOriginal: "R$ 179,90",
-        precoPromocional: "R$ 129,90",
-        desconto: "28% OFF",
-        validade: "30/09/2026",
-        descricao: "Bolsa transversal compacta para o dia a dia.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preta", especificacao: "2 compartimentos • Alça ajustável", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Cinza", especificacao: "2 compartimentos • Alça ajustável", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 24
-    24: {
-        categoria: "ACESSÓRIOS",
-        nome: "Garrafa Térmica",
-        precoOriginal: "R$ 139,90",
-        precoPromocional: "R$ 99,90",
-        desconto: "29% OFF",
-        validade: "30/09/2026",
-        descricao: "Garrafa térmica para bebidas quentes ou frias.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preta", especificacao: "750 ml • Aço inox", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Branca", especificacao: "750 ml • Aço inox", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 25
-    25: {
-        categoria: "OUTROS",
-        nome: "Perfume Night",
-        precoOriginal: "R$ 279,90",
-        precoPromocional: "R$ 199,90",
-        desconto: "29% OFF",
-        validade: "30/09/2026",
-        descricao: "Fragrância marcante para uso noturno.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "50 ml", especificacao: "Frasco de 50 ml", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "100 ml", especificacao: "Frasco de 100 ml", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 26
-    26: {
-        categoria: "OUTROS",
-        nome: "Caneca Térmica",
-        precoOriginal: "R$ 149,90",
-        precoPromocional: "R$ 104,90",
-        desconto: "30% OFF",
-        validade: "30/09/2026",
-        descricao: "Caneca térmica para manter a temperatura da bebida.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preta", especificacao: "450 ml • Tampa vedada", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Branca", especificacao: "450 ml • Tampa vedada", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 27
-    27: {
-        categoria: "OUTROS",
-        nome: "Luminária LED",
-        precoOriginal: "R$ 189,90",
-        precoPromocional: "R$ 129,90",
-        desconto: "32% OFF",
-        validade: "30/09/2026",
-        descricao: "Luminária de mesa com intensidade ajustável.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preta", especificacao: "3 níveis de brilho • USB", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Branca", especificacao: "3 níveis de brilho • USB", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 28
-    28: {
-        categoria: "OUTROS",
-        nome: "Caderno Premium",
-        precoOriginal: "R$ 89,90",
-        precoPromocional: "R$ 59,90",
-        desconto: "33% OFF",
-        validade: "30/09/2026",
-        descricao: "Caderno com capa rígida para estudos e anotações.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preto", especificacao: "160 páginas • Capa rígida", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Azul", especificacao: "160 páginas • Capa rígida", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 29
-    29: {
-        categoria: "OUTROS",
-        nome: "Kit Organização",
-        precoOriginal: "R$ 159,90",
-        precoPromocional: "R$ 109,90",
-        desconto: "31% OFF",
-        validade: "30/09/2026",
-        descricao: "Kit para organização de mesa e acessórios.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preto", especificacao: "5 peças • Organização de mesa", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Cinza", especificacao: "5 peças • Organização de mesa", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 30
-    30: {
-        categoria: "OUTROS",
-        nome: "Almofada Decorativa",
-        precoOriginal: "R$ 119,90",
-        precoPromocional: "R$ 79,90",
-        desconto: "33% OFF",
-        validade: "30/09/2026",
-        descricao: "Almofada decorativa para quarto ou escritório.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preta", especificacao: "45 x 45 cm • Capa removível", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Cinza", especificacao: "45 x 45 cm • Capa removível", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 31
-    31: {
-        categoria: "OUTROS",
-        nome: "Porta-Copos Premium",
-        precoOriginal: "R$ 79,90",
-        precoPromocional: "R$ 49,90",
-        desconto: "38% OFF",
-        validade: "30/09/2026",
-        descricao: "Conjunto de porta-copos com acabamento moderno.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preto", especificacao: "Kit com 4 unidades", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Madeira", especificacao: "Kit com 4 unidades", imagem: "../Imagens/Produto teste.webp" }
-        ]
-    },
-
-    // ATUALIZAÇÃO 01/09 - PRODUTO PROMOCIONAL 32
-    32: {
-        categoria: "OUTROS",
-        nome: "Mini Ventilador USB",
-        precoOriginal: "R$ 129,90",
-        precoPromocional: "R$ 89,90",
-        desconto: "31% OFF",
-        validade: "30/09/2026",
-        descricao: "Mini ventilador USB compacto para mesa.",
-        temTamanho: false,
-        variacoes: [
-            { nome: "Preto", especificacao: "3 velocidades • USB", imagem: "../Imagens/Produto teste.webp" },
-            { nome: "Branco", especificacao: "3 velocidades • USB", imagem: "../Imagens/Produto teste.webp" }
-        ]
     }
 
 };
 
-// ATUALIZAÇÃO 01/09 - CATEGORIAS DOS CARROSSÉIS
-const categoriasPromocao = ["ROUPAS", "INFORMÁTICA", "ACESSÓRIOS", "OUTROS"];
+// ATUALIZAÇÃO 01/09 - SOMENTE AS DUAS CATEGORIAS QUE FICARAM NA PÁGINA DE PROMOÇÕES
+const categoriasPromocao = ["ROUPAS", "INFORMÁTICA"];
+
+// ATUALIZAÇÃO 01/09 - CONTROLA QUAIS CARROSSÉIS PODEM SE MOVIMENTAR
+const carrosseisAtivos = {};
+
+// ATUALIZAÇÃO 01/09 - CONTROLA A MOVIMENTAÇÃO AUTOMÁTICA
+const intervalosCarrosseis = {};
 
 // ATUALIZAÇÃO 01/09 - CRIA OS CARDS A PARTIR DOS PRODUTOS CADASTRADOS
 function criarCardsPromocao() {
     categoriasPromocao.forEach(function(categoria) {
-        const idCarrossel = "carrossel-" + normalizarCategoria(categoria);
-        const carrossel = document.getElementById(idCarrossel);
-        if (!carrossel) { return; }
+        const categoriaNormalizada = normalizarCategoria(categoria);
+        const carrossel = document.getElementById("carrossel-" + categoriaNormalizada);
+
+        if (!carrossel) {
+            return;
+        }
+
         carrossel.innerHTML = "";
 
         Object.keys(produtosPromocao).forEach(function(id) {
             const produto = produtosPromocao[id];
-            if (produto.categoria !== categoria) { return; }
+
+            if (produto.categoria !== categoria) {
+                return;
+            }
 
             const card = document.createElement("article");
             card.className = "card-promocao";
-            card.onclick = function() { abrirProdutoPromocao(id); };
+            card.dataset.produtoId = id;
+            card.onclick = function() {
+                abrirProdutoPromocao(id);
+            };
+
             const imagem = produto.variacoes[0].imagem;
 
             card.innerHTML = `
@@ -559,12 +320,84 @@ function criarCardsPromocao() {
 
             carrossel.appendChild(card);
         });
+
+        configurarCarrossel(categoriaNormalizada);
     });
 }
 
 // ATUALIZAÇÃO 01/09 - TRANSFORMA O NOME DA CATEGORIA NO ID USADO PELO HTML
 function normalizarCategoria(categoria) {
-    return categoria.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    return categoria
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+}
+
+// ATUALIZAÇÃO 01/09 - MOSTRA AUTOMATICAMENTE A QUANTIDADE REAL DE PRODUTOS DA CATEGORIA
+function atualizarQuantidadeCategoria(categoria, quantidade) {
+    const textoQuantidade = document.getElementById("quantidade-" + categoria);
+
+    if (!textoQuantidade) {
+        return;
+    }
+
+    if (quantidade === 1) {
+        textoQuantidade.textContent = "1 produto em promoção";
+    } else {
+        textoQuantidade.textContent = quantidade + " produtos em promoção";
+    }
+}
+
+// ATUALIZAÇÃO 01/09 - ADAPTA O CARROSSEL À QUANTIDADE DE PRODUTOS CADASTRADOS
+function configurarCarrossel(categoria) {
+    const carrossel = document.getElementById("carrossel-" + categoria);
+    const janela = document.getElementById("janela-" + categoria);
+    const secao = document.getElementById("secao-" + categoria);
+
+    if (!carrossel || !janela || !secao) {
+        return;
+    }
+
+    const quantidade = carrossel.querySelectorAll(".card-promocao").length;
+    const setas = secao.querySelectorAll(".seta-carrossel");
+
+    atualizarQuantidadeCategoria(categoria, quantidade);
+
+    // ATUALIZAÇÃO 01/09 - SE A CATEGORIA FICAR SEM PRODUTOS, A SEÇÃO SOME SEM QUEBRAR A PÁGINA
+    if (quantidade === 0) {
+        secao.style.display = "none";
+        carrosseisAtivos[categoria] = false;
+        pararCarrossel(categoria);
+        return;
+    }
+
+    secao.style.display = "block";
+
+    // ATUALIZAÇÃO 01/09 - DE 1 A 3 PRODUTOS O CARROSSEL FICA PARADO E CENTRALIZADO
+    if (quantidade < 4) {
+        carrosseisAtivos[categoria] = false;
+        carrossel.classList.add("carrossel-parado");
+        carrossel.classList.remove("carrossel-quatro");
+
+        setas.forEach(function(seta) {
+            seta.classList.add("oculta");
+        });
+
+        pararCarrossel(categoria);
+        janela.scrollTo({ left: 0 });
+        return;
+    }
+
+    // ATUALIZAÇÃO 01/09 - COM 4 OU MAIS PRODUTOS O CARROSSEL CONTINUA ATIVO
+    carrosseisAtivos[categoria] = true;
+    carrossel.classList.remove("carrossel-parado");
+    carrossel.classList.toggle("carrossel-quatro", quantidade === 4);
+
+    setas.forEach(function(seta) {
+        seta.classList.remove("oculta");
+    });
+
+    iniciarCarrossel(categoria);
 }
 
 // ATUALIZAÇÃO 01/09 - ABRE A COMPRA DO PRODUTO PROMOCIONAL PELO ID
@@ -574,30 +407,52 @@ function abrirProdutoPromocao(id) {
 
 // ATUALIZAÇÃO 01/09 - MOVE O CARROSSEL E REPETE AO CHEGAR NO FINAL
 function moverCarrossel(categoria, direcao) {
+    if (carrosseisAtivos[categoria] !== true) {
+        return;
+    }
+
     const janela = document.getElementById("janela-" + categoria);
-    if (!janela) { return; }
-    const passo = 300;
+    const carrossel = document.getElementById("carrossel-" + categoria);
+
+    if (!janela || !carrossel) {
+        return;
+    }
+
+    const primeiroCard = carrossel.querySelector(".card-promocao");
+
+    if (!primeiroCard) {
+        return;
+    }
+
+    const estiloCarrossel = window.getComputedStyle(carrossel);
+    const espaco = parseFloat(estiloCarrossel.gap) || 20;
+    const passo = primeiroCard.offsetWidth + espaco;
     const limite = janela.scrollWidth - janela.clientWidth;
 
     if (direcao > 0 && janela.scrollLeft >= limite - 10) {
-        janela.scrollTo({ left: 0, behavior: 'smooth' });
+        janela.scrollTo({ left: 0, behavior: "smooth" });
         return;
     }
 
     if (direcao < 0 && janela.scrollLeft <= 10) {
-        janela.scrollTo({ left: limite, behavior: 'smooth' });
+        janela.scrollTo({ left: limite, behavior: "smooth" });
         return;
     }
 
-    janela.scrollBy({ left: passo * direcao, behavior: 'smooth' });
+    janela.scrollBy({
+        left: passo * direcao,
+        behavior: "smooth"
+    });
 }
 
-// ATUALIZAÇÃO 01/09 - CONTROLA A MOVIMENTAÇÃO AUTOMÁTICA
-const intervalosCarrosseis = {};
-
-// ATUALIZAÇÃO 01/09 - INICIA A MOVIMENTAÇÃO AUTOMÁTICA
+// ATUALIZAÇÃO 01/09 - INICIA A MOVIMENTAÇÃO AUTOMÁTICA SOMENTE QUANDO HÁ 4 OU MAIS PRODUTOS
 function iniciarCarrossel(categoria) {
     pararCarrossel(categoria);
+
+    if (carrosseisAtivos[categoria] !== true) {
+        return;
+    }
+
     intervalosCarrosseis[categoria] = setInterval(function() {
         moverCarrossel(categoria, 1);
     }, 3500);
@@ -607,17 +462,17 @@ function iniciarCarrossel(categoria) {
 function pararCarrossel(categoria) {
     if (intervalosCarrosseis[categoria]) {
         clearInterval(intervalosCarrosseis[categoria]);
+        intervalosCarrosseis[categoria] = null;
     }
 }
 
-// ATUALIZAÇÃO 01/09 - INICIA OS CARROSSÉIS SOMENTE NA PÁGINA DE PROMOÇÕES
-document.addEventListener('DOMContentLoaded', function() {
+// ATUALIZAÇÃO 01/09 - INICIA A PÁGINA DE PROMOÇÕES SEM DEPENDER DE UMA QUANTIDADE FIXA DE PRODUTOS
+document.addEventListener("DOMContentLoaded", function() {
     const paginaPromocoes = document.getElementById("carrossel-roupas");
-    if (!paginaPromocoes) { return; }
+
+    if (!paginaPromocoes) {
+        return;
+    }
 
     criarCardsPromocao();
-
-    ["roupas", "informatica", "acessorios", "outros"].forEach(function(categoria) {
-        iniciarCarrossel(categoria);
-    });
 });
