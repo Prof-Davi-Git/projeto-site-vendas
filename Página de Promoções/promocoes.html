@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- ATUALIZAÇÃO 01/09 - TODA ESTA PÁGINA FOI CRIADA NESTA ATUALIZAÇÃO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções - Minha Loja</title>
+    <link rel="stylesheet" href="promocoes.css">
+</head>
+
+<body>
+
+    <!-- ATUALIZAÇÃO 01/09 - BARRA SUPERIOR -->
+    <div class="barra-topo">
+        OFERTAS ESPECIAIS POR TEMPO LIMITADO
+    </div>
+
+    <!-- ATUALIZAÇÃO 01/09 - CABEÇALHO -->
+    <header>
+        <img src="../Imagens/LOJA TESTE (1).png" alt="Logo da loja">
+        <div class="chamada-promocao">
+            <span>OFERTAS 01/09</span>
+            <p>Produtos exclusivos com preços promocionais.</p>
+        </div>
+    </header>
+
+    <!-- ATUALIZAÇÃO 01/09 - MENU -->
+    <nav class="menu">
+        <a href="../Página de Início/inicio.html">INÍCIO</a>
+        <a href="../Página de Produtos/produtos.html">PRODUTOS</a>
+        <a href="promocoes.html" class="ativo">PROMOÇÕES</a>
+        <a href="../Página de Contatos/contato.html">CONTATO</a>
+    </nav>
+
+    <!-- ATUALIZAÇÃO 01/09 - DESTAQUE DA PÁGINA -->
+    <section class="hero-promocao">
+        <p class="etiqueta">OFERTAS EM DESTAQUE</p>
+        <h1>PROMOÇÕES QUE<br>VALEM A PENA</h1>
+        <p>
+            Explore os carrosséis, compare o valor original
+            e aproveite o preço promocional antes do fim da oferta.
+        </p>
+    </section>
+
+    <!-- ATUALIZAÇÃO 01/09 - CARROSSEL DE ROUPAS -->
+    <section class="secao-promocao">
+        <div class="titulo-secao">
+            <div>
+                <span>01</span>
+                <h2>ROUPAS</h2>
+            </div>
+            <p>8 produtos em promoção</p>
+        </div>
+
+        <div class="estrutura-carrossel">
+            <button class="seta-carrossel" onclick="moverCarrossel('roupas', -1)" aria-label="Voltar">‹</button>
+
+            <div
+                class="janela-carrossel"
+                id="janela-roupas"
+                onmouseenter="pararCarrossel('roupas')"
+                onmouseleave="iniciarCarrossel('roupas')"
+            >
+                <div class="carrossel" id="carrossel-roupas"></div>
+            </div>
+
+            <button class="seta-carrossel" onclick="moverCarrossel('roupas', 1)" aria-label="Avançar">›</button>
+        </div>
+    </section>
+
+    <!-- ATUALIZAÇÃO 01/09 - CARROSSEL DE INFORMÁTICA -->
+    <section class="secao-promocao">
+        <div class="titulo-secao">
+            <div>
+                <span>02</span>
+                <h2>INFORMÁTICA</h2>
+            </div>
+            <p>8 produtos em promoção</p>
+        </div>
+
+        <div class="estrutura-carrossel">
+            <button class="seta-carrossel" onclick="moverCarrossel('informatica', -1)" aria-label="Voltar">‹</button>
+
+            <div
+                class="janela-carrossel"
+                id="janela-informatica"
+                onmouseenter="pararCarrossel('informatica')"
+                onmouseleave="iniciarCarrossel('informatica')"
+            >
+                <div class="carrossel" id="carrossel-informatica"></div>
+            </div>
+
+            <button class="seta-carrossel" onclick="moverCarrossel('informatica', 1)" aria-label="Avançar">›</button>
+        </div>
+    </section>
+
+    <!-- ATUALIZAÇÃO 01/09 - CARROSSEL DE ACESSÓRIOS -->
+    <section class="secao-promocao">
+        <div class="titulo-secao">
+            <div>
+                <span>03</span>
+                <h2>ACESSÓRIOS</h2>
+            </div>
+            <p>8 produtos em promoção</p>
+        </div>
+
+        <div class="estrutura-carrossel">
+            <button class="seta-carrossel" onclick="moverCarrossel('acessorios', -1)" aria-label="Voltar">‹</button>
+
+            <div
+                class="janela-carrossel"
+                id="janela-acessorios"
+                onmouseenter="pararCarrossel('acessorios')"
+                onmouseleave="iniciarCarrossel('acessorios')"
+            >
+                <div class="carrossel" id="carrossel-acessorios"></div>
+            </div>
+
+            <button class="seta-carrossel" onclick="moverCarrossel('acessorios', 1)" aria-label="Avançar">›</button>
+        </div>
+    </section>
+
+    <!-- ATUALIZAÇÃO 01/09 - CARROSSEL DE OUTROS -->
+    <section class="secao-promocao">
+        <div class="titulo-secao">
+            <div>
+                <span>04</span>
+                <h2>OUTROS</h2>
+            </div>
+            <p>8 produtos em promoção</p>
+        </div>
+
+        <div class="estrutura-carrossel">
+            <button class="seta-carrossel" onclick="moverCarrossel('outros', -1)" aria-label="Voltar">‹</button>
+
+            <div
+                class="janela-carrossel"
+                id="janela-outros"
+                onmouseenter="pararCarrossel('outros')"
+                onmouseleave="iniciarCarrossel('outros')"
+            >
+                <div class="carrossel" id="carrossel-outros"></div>
+            </div>
+
+            <button class="seta-carrossel" onclick="moverCarrossel('outros', 1)" aria-label="Avançar">›</button>
+        </div>
+    </section>
+
+    <!-- ATUALIZAÇÃO 01/09 - RODAPÉ -->
+    <footer>
+        <p>Escola Professor João Prado Margarido - Todos os direitos reservados © 2026</p>
+    </footer>
+
+    <!-- ATUALIZAÇÃO 01/09 - ARQUIVO DOS PRODUTOS E DOS CARROSSÉIS -->
+    <script src="produtos-promocao.js"></script>
+
+</body>
+</html>
