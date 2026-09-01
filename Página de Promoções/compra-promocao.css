@@ -333,3 +333,18 @@ hr {
         height: 450px;
     }
 }
+
+/* ATUALIZAÇÃO 01/09 - REMOVE A FAIXA ESCURA ABAIXO DA FOTO DO PRODUTO */
+.pagina-compra {
+    align-items: flex-start;
+}
+
+/* ATUALIZAÇÃO 01/09 - IMPEDE A GALERIA DE ESTICAR A ÁREA DA FOTO */
+.galeria {
+    align-items: flex-start;
+}
+
+/* ATUALIZAÇÃO 01/09 - A CAIXA DA FOTO TERMINA EXATAMENTE NO FINAL DA IMAGEM */
+.foto-principal {
+    align-self: flex-start;
+}
