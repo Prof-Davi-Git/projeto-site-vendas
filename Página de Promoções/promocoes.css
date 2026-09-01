@@ -172,6 +172,7 @@ header input {
     scrollbar-width: none;
     scroll-behavior: smooth;
     padding: 8px 2px 18px;
+    scroll-snap-type: x mandatory;
 }
 
 .janela-carrossel::-webkit-scrollbar {
@@ -181,7 +182,7 @@ header input {
 .carrossel {
     display: flex;
     gap: 20px;
-    width: max-content;
+    width: 100%;
 }
 
 .seta-carrossel {
@@ -204,8 +205,8 @@ header input {
 
 /* ATUALIZAÇÃO 01/09 - CARD PROMOCIONAL */
 .card-promocao {
-    width: 270px;
-    flex: 0 0 270px;
+    width: calc((100% - 60px) / 4);
+    flex: 0 0 calc((100% - 60px) / 4);
     position: relative;
     overflow: hidden;
     background-color: #1a1a1a;
@@ -213,6 +214,8 @@ header input {
     border-radius: 14px;
     cursor: pointer;
     transition: 0.3s;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .card-promocao:hover {
@@ -299,6 +302,30 @@ header input {
     border-color: white;
 }
 
+/* ATUALIZAÇÃO 01/09 - CARROSSEL PARADO QUANDO EXISTEM DE 1 A 3 PRODUTOS */
+.carrossel.carrossel-parado {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ATUALIZAÇÃO 01/09 - PRODUTOS CENTRALIZADOS QUANDO O CARROSSEL ESTÁ PARADO */
+.carrossel.carrossel-parado .card-promocao {
+    width: 270px;
+    flex: 0 0 270px;
+}
+
+/* ATUALIZAÇÃO 01/09 - COM EXATAMENTE 4 PRODUTOS, MOSTRA 3 E DEIXA 1 PARA O CARROSSEL MOVIMENTAR */
+.carrossel.carrossel-quatro .card-promocao {
+    width: calc((100% - 40px) / 3);
+    flex-basis: calc((100% - 40px) / 3);
+}
+
+/* ATUALIZAÇÃO 01/09 - ESCONDE AS SETAS QUANDO O CARROSSEL NÃO PRECISA SE MOVIMENTAR */
+.seta-carrossel.oculta {
+    visibility: hidden;
+    pointer-events: none;
+}
+
 /* ATUALIZAÇÃO 01/09 - RODAPÉ */
 footer {
     margin-top: 70px;
@@ -315,6 +342,13 @@ footer p {
 }
 
 /* ATUALIZAÇÃO 01/09 - RESPONSIVIDADE */
+@media (max-width: 1100px) {
+    .card-promocao {
+        width: calc((100% - 40px) / 3);
+        flex-basis: calc((100% - 40px) / 3);
+    }
+}
+
 @media (max-width: 800px) {
     header {
         text-align: center;
@@ -352,48 +386,26 @@ footer p {
         display: none;
     }
 
-    .card-promocao {
+    .card-promocao,
+    .carrossel.carrossel-quatro .card-promocao {
+        width: calc((100% - 20px) / 2);
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
+    .carrossel.carrossel-parado .card-promocao {
         width: 240px;
         flex-basis: 240px;
     }
 }
 
-/* ATUALIZAÇÃO 01/09 - AJUSTE PARA MOSTRAR OS PRODUTOS COMPLETOS NO CARROSSEL */
-.janela-carrossel {
-    scroll-snap-type: x mandatory;
-}
-
-/* ATUALIZAÇÃO 01/09 - QUATRO PRODUTOS COMPLETOS EM TELAS MAIORES */
-.carrossel {
-    width: 100%;
-}
-
-.card-promocao {
-    width: calc((100% - 60px) / 4);
-    flex: 0 0 calc((100% - 60px) / 4);
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
-
-/* ATUALIZAÇÃO 01/09 - TRÊS PRODUTOS COMPLETOS EM TELAS MÉDIAS */
-@media (max-width: 1100px) {
-    .card-promocao {
-        width: calc((100% - 40px) / 3);
-        flex-basis: calc((100% - 40px) / 3);
-    }
-}
-
-/* ATUALIZAÇÃO 01/09 - DOIS PRODUTOS COMPLETOS EM TELAS MENORES */
-@media (max-width: 800px) {
-    .card-promocao {
-        width: calc((100% - 20px) / 2);
-        flex-basis: calc((100% - 20px) / 2);
-    }
-}
-
-/* ATUALIZAÇÃO 01/09 - UM PRODUTO COMPLETO NO CELULAR */
 @media (max-width: 520px) {
-    .card-promocao {
+    .card-promocao,
+    .carrossel.carrossel-quatro .card-promocao {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .carrossel.carrossel-parado .card-promocao {
         width: 100%;
         flex-basis: 100%;
     }
