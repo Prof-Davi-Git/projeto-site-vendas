@@ -398,3 +398,30 @@ footer p {
         flex-basis: 100%;
     }
 }
+
+/* ATUALIZAÇÃO 01/09 - MENSAGEM EXIBIDA ABAIXO DA PESQUISA */
+.mensagem-pesquisa {
+    min-height: 16px;
+    margin: 9px 0 0;
+    color: #bdbdbd;
+    font-size: 12px;
+}
+
+/* ATUALIZAÇÃO 01/09 - AVISO QUANDO A PESQUISA NÃO ENCONTRA UM PRODUTO */
+.mensagem-pesquisa.sem-resultado {
+    color: #e0e0e0;
+}
+
+/* ATUALIZAÇÃO 01/09 - DESTAQUE TEMPORÁRIO DO PRODUTO LOCALIZADO */
+.card-promocao.encontrado {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 2px #ffffff, 0 18px 35px rgba(0, 0, 0, 0.45);
+    transform: translateY(-7px);
+}
+
+/* ATUALIZAÇÃO 01/09 - DESTACA O BOTÃO DO PRODUTO ENCONTRADO */
+.card-promocao.encontrado button {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
