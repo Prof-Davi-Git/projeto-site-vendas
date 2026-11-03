@@ -78,6 +78,11 @@ function carregarCarrinho() {
 
         vazio.style.display = "block";
 
+        // ATUALIZAÇÃO 03/11 - SEM PRODUTOS, O FRETE VOLTA A SER CALCULADO DEPOIS
+        freteAtual = null;
+        distanciaAtual = null;
+        prazoAtual = null;
+
     } else {
 
         vazio.style.display = "none";
