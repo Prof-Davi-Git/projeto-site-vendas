@@ -22,7 +22,7 @@ function mostrarLogin() {
 }
 
 
-// ATUALIZAÇÃO 03/11 - MOSTRA O FORMULÁRIO DE CADASTRO
+// ATUALIZAÇÃO 03/11 - MOSTRA A ORIENTAÇÃO DE CADASTRO
 
 function mostrarCadastro() {
 
@@ -46,66 +46,7 @@ function mostrarCadastro() {
 }
 
 
-// ATUALIZAÇÃO 03/11 - REALIZA UM CADASTRO SIMPLES NO NAVEGADOR
-
-function fazerCadastro(event) {
-
-    event.preventDefault();
-
-    const nome =
-        document.getElementById("nomeCadastro").value.trim();
-
-    const email =
-        document.getElementById("emailCadastro").value.trim();
-
-    const senha =
-        document.getElementById("senhaCadastro").value;
-
-    let usuarios =
-        JSON.parse(localStorage.getItem("usuariosLoja")) || [];
-
-    const emailJaExiste =
-        usuarios.some(function(usuario) {
-            return usuario.email === email;
-        });
-
-    if (emailJaExiste) {
-
-        mostrarMensagem(
-            "Este e-mail já foi cadastrado. Faça o login."
-        );
-
-        return;
-    }
-
-    usuarios.push({
-        nome: nome,
-        email: email,
-        senha: senha
-    });
-
-    localStorage.setItem(
-        "usuariosLoja",
-        JSON.stringify(usuarios)
-    );
-
-    document
-        .getElementById("formCadastro")
-        .reset();
-
-    mostrarLogin();
-
-    document
-        .getElementById("emailLogin")
-        .value = email;
-
-    mostrarMensagem(
-        "Cadastro realizado! Agora digite sua senha e entre."
-    );
-}
-
-
-// ATUALIZAÇÃO 03/11 - VERIFICA OS DADOS INFORMADOS NO LOGIN
+// ATUALIZAÇÃO 03/11 - VERIFICA O LOGIN USANDO O ARQUIVO usuarios.js
 
 function fazerLogin(event) {
 
@@ -117,11 +58,9 @@ function fazerLogin(event) {
     const senha =
         document.getElementById("senhaLogin").value;
 
-    const usuarios =
-        JSON.parse(localStorage.getItem("usuariosLoja")) || [];
-
+    // ATUALIZAÇÃO 03/11 - PROCURA O USUÁRIO NA LISTA FIXA DO PROJETO
     const usuarioEncontrado =
-        usuarios.find(function(usuario) {
+        usuariosCadastrados.find(function(usuario) {
 
             return (
                 usuario.email === email &&
@@ -133,13 +72,13 @@ function fazerLogin(event) {
     if (!usuarioEncontrado) {
 
         mostrarMensagem(
-            "E-mail ou senha não encontrados."
+            "E-mail ou senha não encontrados no cadastro do projeto."
         );
 
         return;
     }
 
-    // ATUALIZAÇÃO 03/11 - GUARDA SOMENTE OS DADOS NECESSÁRIOS DO USUÁRIO LOGADO
+    // ATUALIZAÇÃO 03/11 - GUARDA QUEM ESTÁ LOGADO NESTE NAVEGADOR
     const usuarioLogado = {
         nome: usuarioEncontrado.nome,
         email: usuarioEncontrado.email
