@@ -386,11 +386,17 @@ header {
 .icone-carrinho {
     background-color: white;
     border: none;
-    border-radius: 50%;
-    width: 38px;
+    border-radius: 22px;
+    min-width: 42px;
     height: 38px;
+    padding: 0 10px;
     cursor: pointer;
     font-size: 18px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
 .botao-sair {
