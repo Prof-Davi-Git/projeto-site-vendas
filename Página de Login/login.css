@@ -149,3 +149,37 @@ form input:focus {
     font-size: 13px;
     line-height: 19px;
 }
+
+/* ATUALIZAÇÃO 03/11 - ORIENTAÇÃO PARA CADASTRO PELO ARQUIVO usuarios.js */
+
+.cadastro-orientacao {
+    padding: 8px 0 2px;
+    text-align: center;
+}
+
+.cadastro-orientacao h2 {
+    margin: 0 0 18px;
+    font-size: 18px;
+}
+
+.cadastro-orientacao p {
+    color: #c5c5c5;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.cadastro-orientacao strong {
+    display: block;
+    margin: 14px 0;
+    padding: 12px;
+    background-color: #1c1c1c;
+    border: 1px solid #444444;
+    border-radius: 7px;
+    color: white;
+}
+
+.cadastro-orientacao .aviso-cadastro {
+    margin-top: 18px;
+    color: white;
+    font-weight: bold;
+}
