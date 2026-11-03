@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- ATUALIZAÇÃO 03/11 - PÁGINA FINAL DO CARRINHO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Minha Loja</title>
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+
+<body>
+
+    <!-- ATUALIZAÇÃO 03/11 - BARRA SUPERIOR -->
+    <div class="barra-topo">
+        FINALIZE SUA COMPRA COM SEGURANÇA
+    </div>
+
+    <!-- ATUALIZAÇÃO 03/11 - CABEÇALHO -->
+    <header>
+        <img
+            src="../Imagens/LOJA TESTE (1).png"
+            alt="Logo da loja"
+        >
+
+        <div class="area-usuario" id="areaUsuario">
+            <span id="nomeUsuarioLogado"></span>
+
+            <button
+                type="button"
+                class="botao-sair"
+                onclick="sairDaConta(); window.location.href='../Página de Login/login.html';"
+            >
+                SAIR
+            </button>
+        </div>
+    </header>
+
+    <!-- ATUALIZAÇÃO 03/11 - MENU -->
+    <nav class="menu">
+        <a href="../Página de Início/inicio.html">INÍCIO</a>
+        <a href="../Página de Produtos/produtos.html">PRODUTOS</a>
+        <a href="../Página de Promoções/promocoes.html">PROMOÇÕES</a>
+        <a href="../Página de Contatos/contato.html">CONTATO</a>
+    </nav>
+
+    <!-- ATUALIZAÇÃO 03/11 - CONTEÚDO DO CARRINHO -->
+    <main id="conteudoCompra">
+
+        <section class="titulo-pagina">
+            <p>ÚLTIMA ETAPA</p>
+            <h1>SEU CARRINHO</h1>
+            <span>
+                Confira os produtos, informe a entrega e escolha a forma de pagamento.
+            </span>
+        </section>
+
+        <div class="grade-carrinho">
+
+            <!-- ATUALIZAÇÃO 03/11 - PRODUTOS ADICIONADOS -->
+            <section class="caixa">
+                <div class="titulo-caixa">
+                    <h2>PRODUTOS</h2>
+                    <span id="quantidadeItens">0 itens</span>
+                </div>
+
+                <div id="listaCarrinho"></div>
+
+                <div id="carrinhoVazio" class="carrinho-vazio">
+                    <h3>Seu carrinho está vazio.</h3>
+                    <p>Adicione um produto para continuar a compra.</p>
+                    <a href="../Página de Produtos/produtos.html">
+                        VER PRODUTOS
+                    </a>
+                </div>
+            </section>
+
+            <!-- ATUALIZAÇÃO 03/11 - RESUMO DA COMPRA -->
+            <aside class="caixa resumo-compra">
+                <h2>RESUMO</h2>
+
+                <div class="linha-resumo">
+                    <span>Subtotal</span>
+                    <strong id="subtotalCompra">R$ 0,00</strong>
+                </div>
+
+                <div class="linha-resumo">
+                    <span>Frete</span>
+                    <strong id="freteCompra">A calcular</strong>
+                </div>
+
+                <hr>
+
+                <div class="linha-resumo total">
+                    <span>Total</span>
+                    <strong id="totalCompra">R$ 0,00</strong>
+                </div>
+
+                <a
+                    class="continuar-comprando"
+                    href="../Página de Produtos/produtos.html"
+                >
+                    + CONTINUAR COMPRANDO
+                </a>
+            </aside>
+        </div>
+
+        <!-- ATUALIZAÇÃO 03/11 - ENTREGA -->
+        <section class="caixa etapa-final">
+            <div class="numero-etapa">1</div>
+
+            <div class="conteudo-etapa">
+                <h2>ENTREGA</h2>
+                <p>
+                    Informe o endereço para calcular uma estimativa de frete e prazo.
+                </p>
+
+                <div class="campos-endereco">
+                    <div>
+                        <label for="cep">CEP</label>
+                        <input
+                            id="cep"
+                            type="text"
+                            maxlength="9"
+                            placeholder="00000-000"
+                        >
+                    </div>
+
+                    <div class="campo-maior">
+                        <label for="endereco">Endereço</label>
+                        <input
+                            id="endereco"
+                            type="text"
+                            placeholder="Rua ou avenida"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="numero">Número</label>
+                        <input
+                            id="numero"
+                            type="text"
+                            placeholder="100"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="cidade">Cidade</label>
+                        <input
+                            id="cidade"
+                            type="text"
+                            placeholder="Sua cidade"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="estado">UF</label>
+                        <input
+                            id="estado"
+                            type="text"
+                            maxlength="2"
+                            placeholder="SP"
+                        >
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    class="botao-secundario"
+                    onclick="calcularFrete()"
+                >
+                    CALCULAR FRETE
+                </button>
+
+                <div id="resultadoFrete" class="resultado-frete"></div>
+            </div>
+        </section>
+
+        <!-- ATUALIZAÇÃO 03/11 - PAGAMENTO -->
+        <section class="caixa etapa-final">
+            <div class="numero-etapa">2</div>
+
+            <div class="conteudo-etapa">
+                <h2>PAGAMENTO</h2>
+                <p>Escolha como deseja pagar.</p>
+
+                <div class="formas-pagamento">
+                    <label>
+                        <input
+                            type="radio"
+                            name="pagamento"
+                            value="PIX"
+                            onchange="selecionarPagamento('PIX')"
+                        >
+                        PIX
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="pagamento"
+                            value="CRÉDITO"
+                            onchange="selecionarPagamento('CRÉDITO')"
+                        >
+                        CRÉDITO
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="pagamento"
+                            value="DÉBITO"
+                            onchange="selecionarPagamento('DÉBITO')"
+                        >
+                        DÉBITO
+                    </label>
+                </div>
+
+                <div id="areaPix" class="pagamento-detalhes escondido">
+                    <strong>PIX selecionado</strong>
+                    <p>
+                        Ao finalizar, o pagamento será representado apenas como
+                        demonstração do projeto.
+                    </p>
+                </div>
+
+                <div id="areaCartao" class="pagamento-detalhes escondido">
+                    <div class="campos-cartao">
+                        <div class="campo-maior">
+                            <label for="numeroCartao">Número do cartão</label>
+                            <input
+                                id="numeroCartao"
+                                type="text"
+                                placeholder="0000 0000 0000 0000"
+                            >
+                        </div>
+
+                        <div class="campo-maior">
+                            <label for="nomeCartao">Nome no cartão</label>
+                            <input
+                                id="nomeCartao"
+                                type="text"
+                                placeholder="Nome completo"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="validadeCartao">Validade</label>
+                            <input
+                                id="validadeCartao"
+                                type="text"
+                                placeholder="MM/AA"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="cvvCartao">CVV</label>
+                            <input
+                                id="cvvCartao"
+                                type="text"
+                                maxlength="3"
+                                placeholder="000"
+                            >
+                        </div>
+                    </div>
+
+                    <div id="areaParcelas" class="parcelas escondido">
+                        <label for="parcelas">Parcelas</label>
+                        <select id="parcelas">
+                            <option>1x sem juros</option>
+                            <option>2x sem juros</option>
+                            <option>3x sem juros</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ATUALIZAÇÃO 03/11 - FINALIZAÇÃO -->
+        <section class="caixa finalizar">
+            <div>
+                <p>TOTAL DA COMPRA</p>
+                <strong id="totalFinal">R$ 0,00</strong>
+            </div>
+
+            <button
+                type="button"
+                class="botao-finalizar"
+                onclick="finalizarCompra()"
+            >
+                FINALIZAR COMPRA
+            </button>
+        </section>
+
+        <p id="mensagemFinalizacao" class="mensagem-finalizacao"></p>
+
+    </main>
+
+    <!-- ATUALIZAÇÃO 03/11 - CONFIRMAÇÃO DA COMPRA -->
+    <section id="confirmacaoCompra" class="confirmacao escondido">
+        <div class="icone-confirmacao">✓</div>
+
+        <h1>COMPRA FINALIZADA COM SUCESSO!</h1>
+
+        <p id="textoConfirmacao"></p>
+
+        <div class="dados-confirmacao">
+            <span>Total da compra</span>
+            <strong id="totalConfirmacao"></strong>
+        </div>
+
+        <a href="../Página de Produtos/produtos.html">
+            CONTINUAR COMPRANDO
+        </a>
+    </section>
+
+    <!-- ATUALIZAÇÃO 03/11 - CONTROLE DO USUÁRIO -->
+    <script src="../Página de Login/usuario.js"></script>
+
+    <!-- ATUALIZAÇÃO 03/11 - LÓGICA DO CARRINHO -->
+    <script src="carrinho.js"></script>
+
+</body>
+</html>
