@@ -45,6 +45,27 @@
             onkeyup="filtrarProdutos()"
         >
 
+        <!-- ATUALIZAÇÃO 03/11 - USUÁRIO LOGADO DISPONÍVEL EM TODO O SITE -->
+        <div class="area-usuario" id="areaUsuario">
+            <span id="nomeUsuarioLogado"></span>
+
+            <button
+                type="button"
+                class="icone-carrinho"
+                title="Carrinho"
+            >
+                🛒
+            </button>
+
+            <button
+                type="button"
+                class="botao-sair"
+                onclick="sairDaConta()"
+            >
+                SAIR
+            </button>
+        </div>
+
     </header>
 
 
@@ -445,6 +466,9 @@
 
 
     <script src="produtos.js"></script>
+
+    <!-- ATUALIZAÇÃO 03/11 - MOSTRA O USUÁRIO LOGADO EM TODO O SITE -->
+    <script src="../Página de Login/usuario.js"></script>
 
 
 </body>
