@@ -27,7 +27,7 @@
             <h1>ACESSE SUA CONTA</h1>
 
             <p class="subtitulo">
-                Entre com um usuário cadastrado no projeto para continuar sua compra.
+                Entre ou faça seu cadastro para continuar sua compra.
             </p>
 
             <!-- ATUALIZAÇÃO 03/11 - BOTÕES PARA ALTERNAR ENTRE LOGIN E CADASTRO -->
@@ -80,35 +80,45 @@
 
             </form>
 
-            <!-- ATUALIZAÇÃO 03/11 - ÁREA DE ORIENTAÇÃO PARA NOVOS CADASTROS -->
-            <div
+            <!-- ATUALIZAÇÃO 03/11 - FORMULÁRIO DE CADASTRO -->
+            <form
                 id="formCadastro"
-                class="cadastro-orientacao escondido"
+                class="escondido"
+                onsubmit="fazerCadastro(event)"
             >
 
-                <h2>CADASTRO DOS INTEGRANTES</h2>
+                <label for="nomeCadastro">Nome</label>
 
-                <p>
-                    Os usuários deste projeto ficam cadastrados
-                    diretamente no arquivo:
-                </p>
+                <input
+                    type="text"
+                    id="nomeCadastro"
+                    placeholder="Digite seu nome"
+                    required
+                >
 
-                <strong>
-                    Página de Login / usuarios.js
-                </strong>
+                <label for="emailCadastro">E-mail</label>
 
-                <p>
-                    Para adicionar um novo integrante,
-                    abra esse arquivo e preencha nome,
-                    e-mail e senha no espaço indicado.
-                </p>
+                <input
+                    type="email"
+                    id="emailCadastro"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
 
-                <p class="aviso-cadastro">
-                    Somente usuários que estiverem no arquivo
-                    usuarios.js poderão fazer login.
-                </p>
+                <label for="senhaCadastro">Senha</label>
 
-            </div>
+                <input
+                    type="password"
+                    id="senhaCadastro"
+                    placeholder="Crie uma senha"
+                    required
+                >
+
+                <button type="submit" class="botao-principal">
+                    CADASTRAR
+                </button>
+
+            </form>
 
             <!-- ATUALIZAÇÃO 03/11 - MENSAGEM PARA O USUÁRIO -->
             <p id="mensagemAcesso" class="mensagem-acesso"></p>
@@ -117,10 +127,10 @@
 
     </main>
 
-    <!-- ATUALIZAÇÃO 03/11 - CARREGA PRIMEIRO A LISTA DE USUÁRIOS -->
+    <!-- ATUALIZAÇÃO 03/11 - USUÁRIOS FIXOS DO PROJETO -->
     <script src="usuarios.js"></script>
 
-    <!-- ATUALIZAÇÃO 03/11 - DEPOIS CARREGA A LÓGICA DO LOGIN -->
+    <!-- ATUALIZAÇÃO 03/11 - LÓGICA DO LOGIN E CADASTRO -->
     <script src="login.js"></script>
 
 </body>
