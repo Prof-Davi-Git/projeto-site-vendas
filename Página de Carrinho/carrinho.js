@@ -482,6 +482,9 @@ document.addEventListener(
     "DOMContentLoaded",
     function() {
 
+        // ATUALIZAÇÃO 03/11 - SEM LOGIN, AGUARDA O REDIRECIONAMENTO
+        if (!usuarioCarrinho) return;
+
         carregarCarrinho();
 
         const campoCep =
