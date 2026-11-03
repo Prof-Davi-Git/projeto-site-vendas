@@ -450,7 +450,14 @@ function finalizarCompra() {
     const total =
         calcularSubtotal() + freteAtual;
 
+    // ATUALIZAÇÃO 03/11 - LIMPA SOMENTE O CARRINHO
+    // O USUÁRIO CONTINUA LOGADO APÓS FINALIZAR A COMPRA.
     localStorage.removeItem(chaveCarrinho());
+
+    localStorage.setItem(
+        "usuarioLogado",
+        JSON.stringify(usuarioCarrinho)
+    );
 
     document
         .getElementById("conteudoCompra")
