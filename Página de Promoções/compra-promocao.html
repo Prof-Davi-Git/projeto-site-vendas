@@ -19,6 +19,28 @@
     <!-- ATUALIZAÇÃO 01/09 - CABEÇALHO -->
     <header>
         <img src="../Imagens/LOJA TESTE (1).png" alt="Logo da loja">
+
+        <!-- ATUALIZAÇÃO 03/11 - ÁREA DO USUÁRIO LOGADO E ÍCONE DO CARRINHO -->
+        <div class="area-usuario" id="areaUsuario">
+            <span id="nomeUsuarioLogado"></span>
+
+            <button
+                type="button"
+                class="icone-carrinho"
+                title="Carrinho"
+            >
+                🛒
+            </button>
+
+            <button
+                type="button"
+                class="botao-sair"
+                onclick="sairDaConta()"
+            >
+                SAIR
+            </button>
+        </div>
+
     </header>
 
     <!-- ATUALIZAÇÃO 01/09 - MENU -->
@@ -97,6 +119,9 @@
 
     <!-- ATUALIZAÇÃO 01/09 - LÓGICA DA TELA DE COMPRA -->
     <script src="compra-promocao.js"></script>
+
+    <!-- ATUALIZAÇÃO 03/11 - LOGIN DO USUÁRIO E ACESSO AO CARRINHO -->
+    <script src="../Página de Login/usuario.js"></script>
 
 </body>
 </html>
