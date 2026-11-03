@@ -348,3 +348,60 @@ hr {
 .foto-principal {
     align-self: flex-start;
 }
+
+
+/* ATUALIZAÇÃO 03/11 - USUÁRIO LOGADO NO TOPO DA PÁGINA */
+
+header {
+    position: relative;
+}
+
+.area-usuario {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+#nomeUsuarioLogado {
+    color: white;
+    font-weight: bold;
+}
+
+.icone-carrinho {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.botao-sair {
+    background: transparent;
+    color: #bdbdbd;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.botao-sair:hover {
+    color: white;
+}
+
+@media (max-width: 700px) {
+
+    .area-usuario {
+        position: static;
+        transform: none;
+        margin-left: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
