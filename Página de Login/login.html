@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- ATUALIZAÇÃO 03/11 - NOVA PÁGINA DE LOGIN E CADASTRO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Minha Loja</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <!-- ATUALIZAÇÃO 03/11 - CABEÇALHO DA PÁGINA -->
+    <header>
+        <img
+            src="../Imagens/LOJA TESTE (1).png"
+            alt="Logo da loja"
+        >
+    </header>
+
+    <!-- ATUALIZAÇÃO 03/11 - ÁREA PRINCIPAL DE ACESSO -->
+    <main class="area-acesso">
+
+        <section class="caixa-acesso">
+
+            <h1>ACESSE SUA CONTA</h1>
+
+            <p class="subtitulo">
+                Entre ou faça seu cadastro para continuar sua compra.
+            </p>
+
+            <!-- ATUALIZAÇÃO 03/11 - BOTÕES PARA ALTERNAR ENTRE LOGIN E CADASTRO -->
+            <div class="abas-acesso">
+                <button
+                    type="button"
+                    id="abaLogin"
+                    class="aba ativa"
+                    onclick="mostrarLogin()"
+                >
+                    LOGIN
+                </button>
+
+                <button
+                    type="button"
+                    id="abaCadastro"
+                    class="aba"
+                    onclick="mostrarCadastro()"
+                >
+                    CADASTRE-SE
+                </button>
+            </div>
+
+            <!-- ATUALIZAÇÃO 03/11 - FORMULÁRIO DE LOGIN -->
+            <form id="formLogin" onsubmit="fazerLogin(event)">
+
+                <label for="emailLogin">E-mail</label>
+
+                <input
+                    type="email"
+                    id="emailLogin"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+                <label for="senhaLogin">Senha</label>
+
+                <input
+                    type="password"
+                    id="senhaLogin"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+                <button type="submit" class="botao-principal">
+                    ENTRAR
+                </button>
+
+            </form>
+
+            <!-- ATUALIZAÇÃO 03/11 - FORMULÁRIO DE CADASTRO -->
+            <form
+                id="formCadastro"
+                class="escondido"
+                onsubmit="fazerCadastro(event)"
+            >
+
+                <label for="nomeCadastro">Nome</label>
+
+                <input
+                    type="text"
+                    id="nomeCadastro"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+                <label for="emailCadastro">E-mail</label>
+
+                <input
+                    type="email"
+                    id="emailCadastro"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+                <label for="senhaCadastro">Senha</label>
+
+                <input
+                    type="password"
+                    id="senhaCadastro"
+                    placeholder="Crie uma senha"
+                    required
+                >
+
+                <button type="submit" class="botao-principal">
+                    CADASTRAR
+                </button>
+
+            </form>
+
+            <!-- ATUALIZAÇÃO 03/11 - MENSAGEM PARA O USUÁRIO -->
+            <p id="mensagemAcesso" class="mensagem-acesso"></p>
+
+        </section>
+
+    </main>
+
+    <!-- ATUALIZAÇÃO 03/11 - LÓGICA DO LOGIN E CADASTRO -->
+    <script src="login.js"></script>
+
+</body>
+</html>
