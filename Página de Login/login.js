@@ -22,7 +22,7 @@ function mostrarLogin() {
 }
 
 
-// ATUALIZAÇÃO 03/11 - MOSTRA A ORIENTAÇÃO DE CADASTRO
+// ATUALIZAÇÃO 03/11 - MOSTRA O FORMULÁRIO DE CADASTRO
 
 function mostrarCadastro() {
 
@@ -46,7 +46,80 @@ function mostrarCadastro() {
 }
 
 
-// ATUALIZAÇÃO 03/11 - VERIFICA O LOGIN USANDO O ARQUIVO usuarios.js
+// ATUALIZAÇÃO 03/11 - CADASTRO REALIZADO NO NAVEGADOR ATUAL
+
+function fazerCadastro(event) {
+
+    event.preventDefault();
+
+    const nome =
+        document.getElementById("nomeCadastro").value.trim();
+
+    const email =
+        document.getElementById("emailCadastro").value.trim();
+
+    const senha =
+        document.getElementById("senhaCadastro").value;
+
+    let usuariosTemporarios =
+        JSON.parse(
+            localStorage.getItem("usuariosTemporarios")
+        ) || [];
+
+    const emailJaExisteNoCodigo =
+        usuariosCadastrados.some(function(usuario) {
+
+            return usuario.email === email;
+
+        });
+
+    const emailJaExisteNoNavegador =
+        usuariosTemporarios.some(function(usuario) {
+
+            return usuario.email === email;
+
+        });
+
+    if (
+        emailJaExisteNoCodigo ||
+        emailJaExisteNoNavegador
+    ) {
+
+        mostrarMensagem(
+            "Este e-mail já está cadastrado. Faça o login."
+        );
+
+        return;
+    }
+
+    usuariosTemporarios.push({
+        nome: nome,
+        email: email,
+        senha: senha
+    });
+
+    localStorage.setItem(
+        "usuariosTemporarios",
+        JSON.stringify(usuariosTemporarios)
+    );
+
+    document
+        .getElementById("formCadastro")
+        .reset();
+
+    mostrarLogin();
+
+    document
+        .getElementById("emailLogin")
+        .value = email;
+
+    mostrarMensagem(
+        "Cadastro realizado com sucesso! Agora digite sua senha e entre."
+    );
+}
+
+
+// ATUALIZAÇÃO 03/11 - VERIFICA O LOGIN
 
 function fazerLogin(event) {
 
@@ -58,8 +131,8 @@ function fazerLogin(event) {
     const senha =
         document.getElementById("senhaLogin").value;
 
-    // ATUALIZAÇÃO 03/11 - PROCURA O USUÁRIO NA LISTA FIXA DO PROJETO
-    const usuarioEncontrado =
+    // ATUALIZAÇÃO 03/11 - USUÁRIOS FIXOS QUE ACOMPANHAM O PROJETO
+    const usuarioDoCodigo =
         usuariosCadastrados.find(function(usuario) {
 
             return (
@@ -69,16 +142,35 @@ function fazerLogin(event) {
 
         });
 
+    // ATUALIZAÇÃO 03/11 - USUÁRIOS CRIADOS NESTE NAVEGADOR
+    const usuariosTemporarios =
+        JSON.parse(
+            localStorage.getItem("usuariosTemporarios")
+        ) || [];
+
+    const usuarioTemporario =
+        usuariosTemporarios.find(function(usuario) {
+
+            return (
+                usuario.email === email &&
+                usuario.senha === senha
+            );
+
+        });
+
+    const usuarioEncontrado =
+        usuarioDoCodigo || usuarioTemporario;
+
     if (!usuarioEncontrado) {
 
         mostrarMensagem(
-            "E-mail ou senha não encontrados no cadastro do projeto."
+            "E-mail ou senha não encontrados."
         );
 
         return;
     }
 
-    // ATUALIZAÇÃO 03/11 - GUARDA QUEM ESTÁ LOGADO NESTE NAVEGADOR
+    // ATUALIZAÇÃO 03/11 - GUARDA QUEM ESTÁ LOGADO
     const usuarioLogado = {
         nome: usuarioEncontrado.nome,
         email: usuarioEncontrado.email
@@ -89,7 +181,7 @@ function fazerLogin(event) {
         JSON.stringify(usuarioLogado)
     );
 
-    // ATUALIZAÇÃO 03/11 - VOLTA PARA A PÁGINA ONDE O USUÁRIO CLICOU EM ADICIONAR AO CARRINHO
+    // ATUALIZAÇÃO 03/11 - VOLTA PARA A PÁGINA ONDE O USUÁRIO ESTAVA
     const paginaRetorno =
         localStorage.getItem("paginaRetornoLogin") ||
         "../Página de Início/inicio.html";
